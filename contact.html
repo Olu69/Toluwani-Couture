@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>
+        Contact | Toluwani Couture &amp; Textiles
+    </title>
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <!-- =====================================================
+         SHARED HEADER / FOOTER STYLES
+    ====================================================== -->
+    <link
+        rel="stylesheet"
+        href="home.css"
+    >
+    <!-- =====================================================
+         CONTACT PAGE STYLES
+    ====================================================== -->
+    <link
+        rel="stylesheet"
+        href="contact.css"
+    >
+</head>
+<body>
+<!-- =====================================================
+     HEADER
+====================================================== -->
+<header
+    class="site-header"
+    id="siteHeader"
+>
+    <div class="nav-container">
+        <!-- BRAND -->
+        <a
+            href="index.html"
+            class="brand"
+        >
+            <img
+                src="logo.png"
+                alt="Toluwani Couture"
+            >
+            <span>
+                TOLUWANI COUTURE
+            </span>
+        </a>
+        <!-- DESKTOP NAVIGATION -->
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+            <a href="index.html">
+                Home
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <a href="services.html">
+                Services
+            </a>
+            <a href="fabrics.html">
+                Shop Fabrics
+            </a>
+            <a href="gallery.html">
+                Gallery
+            </a>
+            <a href="appointment.html">
+                Appointment
+            </a>
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+        </nav>
+        <!-- MOBILE MENU BUTTON -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <!-- MOBILE NAVIGATION -->
+    <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-label="Mobile navigation"
+    >
+        <div class="mobile-nav-inner">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <a href="services.html">
+                Services
+            </a>
+            <a href="fabrics.html">
+                Shop Fabrics
+            </a>
+            <a href="gallery.html">
+                Gallery
+            </a>
+            <a href="appointment.html">
+                Appointment
+            </a>
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+        </div>
+    </nav>
+</header>
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+<main>
+    <!-- =================================================
+         CONTACT HERO
+    ================================================== -->
+    <section class="contact-hero">
+        <div class="contact-hero-inner">
+            <!-- HERO CONTENT -->
+            <div class="contact-hero-content">
+                <p class="contact-hero-eyebrow">
+                    GET IN TOUCH
+                </p>
+                <h1 class="contact-hero-title">
+                    Let’s Connect.
+                </h1>
+                <p class="contact-hero-description">
+                    Whether you have a question about a custom piece,
+                    our fabrics, tailoring training, or an upcoming
+                    appointment, we would love to hear from you.
+                </p>
+            </div>
+            <!-- HERO IMAGE -->
+            <div class="contact-hero-image">
+                <img
+                    src="https://istbncxutptjguijzfqq.supabase.co/storage/v1/object/public/toluwani-gallery/Bridal2.jpeg"
+                    alt="Toluwani Couture &amp; Textiles"
+                >
+            </div>
+        </div>
+    </section>
+    <!-- =================================================
+         CONTACT OPTIONS
+    ================================================== -->
+    <section class="contact-options">
+        <div class="contact-options-heading">
+            <p class="contact-options-eyebrow">
+                CONNECT WITH US
+            </p>
+            <h2 class="contact-options-title">
+                Choose how you’d like to reach us.
+            </h2>
+        </div>
+        <div class="contact-options-grid">
+            <!-- WHATSAPP -->
+            <a
+                href="https://wa.me/2349026418431"
+                class="contact-option-card"
+                target="_blank"
+                rel="noopener"
+            >
+                <div class="contact-option-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-option-content">
+                    <span class="contact-option-label">
+                        WHATSAPP
+                    </span>
+                    <h3 class="contact-option-title">
+                        Start a Conversation
+                    </h3>
+                    <p class="contact-option-text">
+                        Speak with us directly on whatsapp.
+                    </p>
+                </div>
+                <i
+                    class="fa-solid fa-arrow-up-right-from-square contact-option-arrow"
+                ></i>
+            </a>
+            <!-- EMAIL -->
+            <a
+                href="mailto:"
+                class="contact-option-card"
+            >
+                <div class="contact-option-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="contact-option-content">
+                    <span class="contact-option-label">
+                        EMAIL
+                    </span>
+                    <h3 class="contact-option-title">
+                        Send Us a Message
+                    </h3>
+                    <p class="contact-option-text">
+                        For enquiries, collaborations,
+                        and general information.
+                    </p>
+                </div>
+                <i
+                    class="fa-solid fa-arrow-up-right-from-square contact-option-arrow"
+                ></i>
+            </a>
+            <!-- APPOINTMENT -->
+            <a
+                href="appointment.html"
+                class="contact-option-card"
+            >
+                <div class="contact-option-icon">
+                    <i class="fa-regular fa-calendar"></i>
+                </div>
+                <div class="contact-option-content">
+                    <span class="contact-option-label">
+                        APPOINTMENT
+                    </span>
+                    <h3 class="contact-option-title">
+                        Book a Fitting
+                    </h3>
+                    <p class="contact-option-text">
+                        Schedule a fitting session for
+                        your next bespoke piece.
+                    </p>
+                </div>
+                <i
+                    class="fa-solid fa-arrow-right contact-option-arrow"
+                ></i>
+            </a>
+        </div>
+    </section>
+    <!-- =================================================
+         LOCATION
+    ================================================== -->
+    <section class="contact-location">
+        <div class="contact-location-inner">
+            <!-- LOCATION INFORMATION -->
+            <div class="contact-location-content">
+                <p class="contact-location-eyebrow">
+                    VISIT US
+                </p>
+                <h2 class="contact-location-title">
+                    Where to Find Us
+                </h2>
+                <p class="contact-location-text">
+                    Our studio is located in Ologuneru,
+                    Ibadan, Oyo State, Nigeria.
+                </p>
+                <p class="contact-location-text">
+                    We also offer nationwide delivery.
+                    Studio visits are available by appointment.
+                </p>
+                <div class="contact-location-details">
+                    <!-- LOCATION -->
+                    <div class="contact-location-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span>
+                                LOCATION
+                            </span>
+                            <p>
+                                Ologuneru, Ibadan,
+                                Oyo State, Nigeria
+                            </p>
+                        </div>
+                    </div>
+                    <!-- DELIVERY -->
+                    <div class="contact-location-detail">
+                        <i class="fa-solid fa-truck"></i>
+                        <div>
+                            <span>
+                                DELIVERY
+                            </span>
+                            <p>
+                                Nationwide delivery available
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTUAL GOOGLE MAP -->
+            <div class="contact-location-map">
+                <iframe
+                    src="https://www.google.com/maps?q=Ologuneru%2C%20Ibadan%2C%20Oyo%20State%2C%20Nigeria&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Toluwani Couture &amp; Textiles location"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- =================================================
+         FINAL CTA
+    ================================================== -->
+    <section class="contact-final-cta">
+        <div class="contact-final-cta-inner">
+            <p class="contact-final-cta-eyebrow">
+                TOLUWANI COUTURE &amp; TEXTILES
+            </p>
+            <h2 class="contact-final-cta-title">
+                Let’s Create Something Beautiful.
+            </h2>
+            <p class="contact-final-cta-text">
+                From the first conversation to the final fitting,
+                every detail is thoughtfully crafted.
+            </p>
+            <a
+                href="appointment.html"
+                class="contact-final-cta-button"
+            >
+                Book a Fitting
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+</main>
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- FOOTER BRAND -->
+        <div class="footer-brand">
+            <a href="index.html">
+                Toluwani Couture &amp; Textiles
+            </a>
+            <p>
+                Elegance Woven, Heritage Crafted.
+            </p>
+            <span class="footer-registration">
+                RC No: 9674768
+            </span>
+        </div>
+        <!-- FOOTER SITEMAP -->
+        <div class="footer-sitemap">
+            <!-- EXPLORE -->
+            <div class="footer-group">
+                <h4>
+                    Explore
+                </h4>
+                <nav>
+                    <a href="index.html">
+                        Home
+                    </a>
+                    <a href="about.html">
+                        About
+                    </a>
+                    <a href="fabrics.html">
+                        Shop Fabrics
+                    </a>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </nav>
+            </div>
+            <!-- SERVICES -->
+            <div class="footer-group">
+                <h4>
+                    Services
+                </h4>
+                <nav>
+                    <a href="services.html">
+                        Custom Tailoring
+                    </a>
+                    <a href="fabrics.html">
+                        Fabric &amp; Materials
+                    </a>
+                    <a href="training.html">
+                        Tailoring Training
+                    </a>
+                    <a href="appointment.html">
+                        Appointments
+                    </a>
+                </nav>
+            </div>
+            <!-- CONTACT -->
+            <div class="footer-group">
+                <h4>
+                    Contact
+                </h4>
+                <nav>
+                    <a href="appointment.html">
+                        Appointment
+                    </a>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                    <a
+                        href="https://wa.me/2349026418431"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <!-- SOCIAL LINKS -->
+        <div class="footer-socials">
+            <a
+                href="https://instagram.com/toluwani_couture"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+                href="https://www.tiktok.com/@toluwani_couture"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a
+                href="https://wa.me/2349026418431"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>
+                © 2026 Toluwani Couture &amp; Textiles.
+                All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- =====================================================
+     SCROLL TO TOP
+====================================================== -->
+<a
+    href="#"
+    class="scroll-top"
+    id="scrollTopBtn"
+    aria-label="Scroll to top"
+>
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+<!-- =====================================================
+     SHARED JAVASCRIPT
+====================================================== -->
+<script src="script.js"></script>
+</body>
+</html>

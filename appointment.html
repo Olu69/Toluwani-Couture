@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Book an appointment with Toluwani Couture & Textiles for custom tailoring, fabrics, materials, and tailoring services."
+  >
+
+  <title>Appointment | Toluwani Couture & Textiles</title>
+
+  <!-- Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- Existing site CSS -->
+  <link rel="stylesheet" href="home.css">
+
+  <!-- Appointment page CSS -->
+  <link rel="stylesheet" href="appointment.css">
+
+  <!-- Chat CSS -->
+  <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header" id="siteHeader">
+
+    <div class="nav-container">
+
+      <a href="index.html" class="brand">
+        <img
+          src="logo.png"
+          alt="Toluwani Couture"
+        >
+
+        <span>TOLUWANI COUTURE</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="fabrics.html">
+          Shop Fabrics
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a
+          href="appointment.html"
+          class="active"
+        >
+          Appointment
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+
+    <nav
+      class="mobile-nav"
+      id="mobileNav"
+      aria-label="Mobile navigation"
+    >
+
+      <div class="mobile-nav-inner">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="fabrics.html">
+          Shop Fabrics
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a
+          href="appointment.html"
+          class="active"
+        >
+          Appointment
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================================
+       MAIN
+  ========================================== -->
+
+  <main>
+
+
+    <!-- =======================================
+         1. APPOINTMENT INTRO
+    ======================================== -->
+
+    <section class="appointment-intro">
+
+      <div class="appointment-intro-inner">
+
+        <div class="appointment-intro-logo">
+
+          <img
+            src="logo.png"
+            alt="Toluwani Couture"
+          >
+
+        </div>
+
+
+        <div class="appointment-intro-content">
+
+          <span class="appointment-section-eyebrow">
+            TOLUWANI COUTURE &amp; TEXTILES
+          </span>
+
+          <h1>
+            Let's create something made for you.
+          </h1>
+
+          <p>
+            Whether you are looking for a custom outfit,
+            a fabric consultation, fitting, tailoring training,
+            or simply want to discuss an idea, start by telling
+            us what you need.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================
+         2. BOOKING FORM
+    ======================================== -->
+
+    <section class="appointment-booking">
+
+      <div class="appointment-booking-inner">
+
+        <div class="appointment-section-heading">
+
+          <span class="appointment-section-eyebrow">
+            YOUR APPOINTMENT
+          </span>
+
+          <h2>
+            Tell us what you need.
+          </h2>
+
+          <p>
+            Share a few details about your appointment
+            and we'll get back to you to confirm the
+            details.
+          </p>
+
+        </div>
+
+
+        <form
+          class="appointment-form"
+          id="appointmentForm"
+        >
+
+          <div class="appointment-form-grid">
+
+
+            <!-- Full name -->
+
+            <div class="appointment-field">
+
+              <label for="fullName">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="fullName"
+                name="full_name"
+                placeholder="Your full name"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="appointment-field">
+
+              <label for="email">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="appointment-field">
+
+              <label for="phone">
+                Phone / WhatsApp
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your phone number"
+                autocomplete="tel"
+                required
+              >
+
+            </div>
+
+
+            <!-- Appointment type -->
+
+            <div class="appointment-field">
+
+              <label for="appointmentType">
+                Appointment Type
+              </label>
+
+              <select
+                id="appointmentType"
+                name="appointment_type"
+                required
+              >
+
+                <option value="">
+                  Select an appointment type
+                </option>
+
+                <option value="custom-tailoring">
+                  Custom Tailoring
+                </option>
+
+                <option value="fabric-materials">
+                  Fabric & Materials
+                </option>
+
+                <option value="fitting">
+                  Fitting
+                </option>
+
+                <option value="tailoring-training">
+                  Tailoring Training
+                </option>
+
+                <option value="consultation">
+                  General Consultation
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- Preferred date -->
+
+            <div class="appointment-field">
+
+              <label for="preferredDate">
+                Preferred Date
+              </label>
+
+              <input
+                type="date"
+                id="preferredDate"
+                name="preferred_date"
+                required
+              >
+
+            </div>
+
+
+            <!-- Preferred time -->
+
+            <div class="appointment-field">
+
+              <label for="preferredTime">
+                Preferred Time
+              </label>
+
+              <select
+                id="preferredTime"
+                name="preferred_time"
+                required
+              >
+
+                <option value="">
+                  Select a preferred time
+                </option>
+
+                <option value="morning">
+                  Morning
+                </option>
+
+                <option value="afternoon">
+                  Afternoon
+                </option>
+
+                <option value="evening">
+                  Evening
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div class="appointment-field appointment-field-full">
+
+              <label for="message">
+                Additional Details
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us a little more about what you need..."
+              ></textarea>
+
+            </div>
+
+          </div>
+
+
+          <div class="appointment-form-action">
+
+            <button
+              type="submit"
+              class="appointment-submit"
+            >
+              Request Appointment
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================
+         3. WHAT HAPPENS NEXT
+    ======================================== -->
+
+    <section class="appointment-process">
+
+      <div class="appointment-process-inner">
+
+        <div class="appointment-section-heading">
+
+          <span class="appointment-section-eyebrow">
+            WHAT HAPPENS NEXT
+          </span>
+
+          <h2>
+            From request to appointment.
+          </h2>
+
+        </div>
+
+
+        <div class="appointment-process-list">
+
+
+          <article class="appointment-process-item">
+
+            <span class="appointment-process-number">
+              01
+            </span>
+
+            <div>
+
+              <h3>
+                Send Your Request
+              </h3>
+
+              <p>
+                Tell us what service you need,
+                your preferred date, and any details
+                that will help us understand your request.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="appointment-process-item">
+
+            <span class="appointment-process-number">
+              02
+            </span>
+
+            <div>
+
+              <h3>
+                We Review the Details
+              </h3>
+
+              <p>
+                We'll look through your request and
+                contact you to discuss the details
+                and availability.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="appointment-process-item">
+
+            <span class="appointment-process-number">
+              03
+            </span>
+
+            <div>
+
+              <h3>
+                We Confirm Your Appointment
+              </h3>
+
+              <p>
+                Once the details are agreed, we'll
+                confirm your appointment and let you
+                know what to expect next.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="appointment-process-item">
+
+            <span class="appointment-process-number">
+              04
+            </span>
+
+            <div>
+
+              <h3>
+                Come Prepared
+              </h3>
+
+              <p>
+                Bring any inspiration, measurements,
+                fabric ideas, or questions you may have
+                so we can make the most of your appointment.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================
+         4. OTHER WAYS TO REACH US
+    ======================================== -->
+
+    <section class="appointment-contact">
+
+      <div class="appointment-contact-inner">
+
+        <div class="appointment-section-heading">
+
+          <span class="appointment-section-eyebrow">
+            NEED TO TALK FIRST?
+          </span>
+
+          <h2>
+            Prefer another way to reach us?
+          </h2>
+
+          <p>
+            If you would rather speak with us directly
+            before booking, choose whichever option
+            works best for you.
+          </p>
+
+        </div>
+
+
+        <div class="appointment-contact-grid">
+
+
+          <!-- WhatsApp -->
+
+          <a
+            href="https://wa.me/2349026418431"
+            class="appointment-contact-card"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <span class="appointment-contact-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                WhatsApp
+              </h3>
+
+              <p>
+                Chat with us directly about your
+                appointment or service.
+              </p>
+
+              <span class="appointment-contact-link">
+                Start on WhatsApp
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- Email -->
+
+          <a
+            href="mailto:info@toluwanicollection.com"
+            class="appointment-contact-card"
+          >
+
+            <span class="appointment-contact-icon">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                Email
+              </h3>
+
+              <p>
+                Send us a detailed enquiry and
+                we'll get back to you.
+              </p>
+
+              <span class="appointment-contact-link">
+                Send an Email
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- Start conversation -->
+
+          <button
+            type="button"
+            class="appointment-contact-card appointment-chat-trigger"
+            id="startConversationBtn"
+          >
+
+            <span class="appointment-contact-icon">
+              <i class="fa-regular fa-comments"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                Start a Conversation
+              </h3>
+
+              <p>
+                Have a question before you book?
+                Start a conversation with us.
+              </p>
+
+              <span class="appointment-contact-link">
+                Start a Conversation
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================
+       CHAT START WINDOW
+  ========================================== -->
+
+  <div
+    class="chat-start-overlay"
+    id="chatStartOverlay"
+    aria-hidden="true"
+  >
+
+    <div
+      class="chat-start-window"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="chatStartTitle"
+    >
+
+      <button
+        type="button"
+        class="chat-close"
+        id="chatCloseBtn"
+        aria-label="Close chat"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+
+      <div class="chat-start-brand">
+
+        <img
+          src="logo.png"
+          alt="Toluwani Couture"
+        >
+
+      </div>
+
+
+      <span class="chat-start-eyebrow">
+        TOLUWANI COUTURE &amp; TEXTILES
+      </span>
+
+
+      <h2 id="chatStartTitle">
+        Start a Conversation
+      </h2>
+
+
+      <p class="chat-start-description">
+        Have a question before booking?
+        Tell us who you are and we'll start a conversation with you.
+      </p>
+
+
+      <form
+        class="chat-start-form"
+        id="chatStartForm"
+      >
+
+        <div class="chat-field">
+
+          <label for="chatVisitorName">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="chatVisitorName"
+            name="visitor_name"
+            placeholder="Your name"
+            autocomplete="name"
+            required
+          >
+
+        </div>
+
+
+        <div class="chat-field">
+
+          <label for="chatVisitorEmail">
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            id="chatVisitorEmail"
+            name="visitor_email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="chat-start-submit"
+          id="chatStartSubmit"
+        >
+          Start Chat
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+
+        <p
+          class="chat-start-error"
+          id="chatStartError"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+
+      <div class="footer-brand">
+
+        <a href="index.html">
+          Toluwani Couture &amp; Textiles
+        </a>
+
+        <p>
+          Elegance Woven, Heritage Crafted.
+        </p>
+
+        <span class="footer-registration">
+          RC No: 9674768
+        </span>
+
+      </div>
+
+
+      <div class="footer-sitemap">
+
+
+        <div class="footer-group">
+
+          <h4>
+            Explore
+          </h4>
+
+          <nav>
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <a href="about.html">
+              About
+            </a>
+
+            <a href="fabrics.html">
+              Shop Fabrics
+            </a>
+
+            <a href="gallery.html">
+              Gallery
+            </a>
+
+          </nav>
+
+        </div>
+
+
+        <div class="footer-group">
+
+          <h4>
+            Services
+          </h4>
+
+          <nav>
+
+            <a href="services.html">
+              Custom Tailoring
+            </a>
+
+            <a href="fabrics.html">
+              Fabric &amp; Materials
+            </a>
+
+            <a href="training.html">
+              Tailoring Training
+            </a>
+
+            <a href="appointment.html">
+              Appointments
+            </a>
+
+          </nav>
+
+        </div>
+
+
+        <div class="footer-group">
+
+          <h4>
+            Contact
+          </h4>
+
+          <nav>
+
+            <a href="appointment.html">
+              Appointment
+            </a>
+
+            <a href="contact.html">
+              Contact Us
+            </a>
+
+            <a
+              href="https://wa.me/2349026418431"
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp
+            </a>
+
+          </nav>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-socials">
+
+        <a
+          href="https://instagram.com/toluwani_couture"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@toluwani_couture"
+          target="_blank"
+          rel="noopener"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a
+          href="https://wa.me/2349026418431"
+          target="_blank"
+          rel="noopener"
+          aria-label="WhatsApp"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Toluwani Couture &amp; Textiles.
+          All Rights Reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       SCROLL TO TOP
+  ========================================== -->
+
+  <a
+    href="#"
+    class="scroll-top"
+    id="scrollTopBtn"
+    aria-label="Scroll to top"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+
+  <!-- Existing shared JavaScript -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+  <script src="appointment.js"></script>
+  
+
+</body>
+</html>

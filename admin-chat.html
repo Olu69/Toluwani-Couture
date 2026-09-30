@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toluwani Couture | Admin Chat</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="admin-chat.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN LOGIN
+         ===================================================== -->
+
+    <section class="admin-login-screen" id="adminLoginScreen">
+
+        <div class="admin-login-box">
+
+            <div class="admin-login-brand">
+                <img src="logo.png" alt="Toluwani Couture">
+            </div>
+
+            <span class="admin-section-eyebrow">
+                TOLUWANI COUTURE
+            </span>
+
+            <h1>Admin Chat</h1>
+
+            <p>
+                Sign in to access visitor conversations.
+            </p>
+
+            <form id="adminLoginForm">
+
+                <div class="admin-login-field">
+
+                    <label for="adminEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        autocomplete="email"
+                        placeholder="Admin email"
+                        required
+                    >
+
+                </div>
+
+                <div class="admin-login-field">
+
+                    <label for="adminPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        autocomplete="current-password"
+                        placeholder="Password"
+                        required
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    id="adminLoginButton"
+                >
+                    Sign In
+                </button>
+
+                <p
+                    id="adminLoginError"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ADMIN DASHBOARD
+         ===================================================== -->
+
+    <main
+        class="admin-chat-page"
+        id="adminChatPage"
+        hidden
+    >
+
+        <header class="admin-chat-header">
+
+            <div class="admin-brand">
+
+                <img
+                    src="logo.png"
+                    alt="Toluwani Couture"
+                >
+
+                <div class="admin-brand-text">
+
+                    <strong>
+                        Toluwani Couture
+                    </strong>
+
+                    <span>
+                        Admin Chat
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-header-status">
+
+                <span class="admin-status-dot"></span>
+
+                <span>
+                    Chat Dashboard
+                </span>
+
+                <button
+                    type="button"
+                    id="adminLogoutButton"
+                    title="Sign out"
+                >
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <section class="admin-chat-dashboard">
+
+            <!-- =================================================
+                 CONVERSATIONS
+                 ================================================= -->
+
+            <aside class="conversation-panel">
+
+                <div class="conversation-panel-header">
+
+                    <div>
+
+                        <span class="admin-section-eyebrow">
+                            INBOX
+                        </span>
+
+                        <h1>
+                            Conversations
+                        </h1>
+
+                    </div>
+
+                    <span
+                        class="conversation-count"
+                        id="conversationCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="conversation-list"
+                    id="conversationList"
+                >
+
+                    <div class="conversation-empty">
+
+                        <i class="fa-regular fa-comments"></i>
+
+                        <strong>
+                            Loading conversations...
+                        </strong>
+
+                        <p>
+                            Please wait.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =================================================
+                 ACTIVE CHAT
+                 ================================================= -->
+
+            <section class="active-chat-panel">
+
+                <div class="active-chat-empty">
+
+                    <div class="active-chat-empty-icon">
+
+                        <i class="fa-regular fa-message"></i>
+
+                    </div>
+
+                    <span class="admin-section-eyebrow">
+                        TOLUWANI COUTURE
+                    </span>
+
+                    <h2>
+                        Select a Conversation
+                    </h2>
+
+                    <p>
+                        Choose a conversation from the inbox
+                        to view messages and reply to the visitor.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+        <!-- =====================================================
+     NEW MESSAGE NOTIFICATION
+     ===================================================== -->
+
+<div
+    class="admin-message-notification"
+    id="adminMessageNotification"
+    aria-live="polite"
+    aria-hidden="true"
+>
+    <div class="admin-message-notification-icon">
+        <i class="fa-regular fa-message"></i>
+    </div>
+
+    <div class="admin-message-notification-content">
+        <strong>
+            New message
+        </strong>
+
+        <span id="adminMessageNotificationText">
+            You have a new visitor message.
+        </span>
+    </div>
+
+    <button
+        type="button"
+        class="admin-message-notification-close"
+        id="adminMessageNotificationClose"
+        aria-label="Dismiss notification"
+    >
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+</div>
+
+    </main>
+    
+
+
+    <!-- =====================================================
+         SUPABASE
+         ===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="admin-chat.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,4627 @@
+/* =========================================================
+   TOLUWANI COUTURE
+   HOME — HEADER + HERO + INTRO + WHAT WE DO
+   ========================================================= */
+
+:root {
+    --navy: #071a35;
+    --navy-deep: #041126;
+    --gold: #c7a45a;
+    --gold-light: #dfc783;
+    --white: #ffffff;
+    --black: #090909;
+    --text-main: #111111;
+    --text-soft: #5f6368;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text-main);
+    background: var(--white);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: var(--text-main);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+p {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    z-index: 1000;
+
+    background: rgba(7, 26, 53, 0.22);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background: transparent;
+
+    overflow: hidden;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 0;
+    flex-shrink: 0;
+
+    color: rgba(255, 255, 255, 0.96);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    letter-spacing: -0.025em;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.brand:hover {
+    color: var(--gold-light);
+}
+
+.brand img {
+    display: block;
+
+    width: auto;
+    height: 50px;
+
+    max-width: none;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.brand span {
+    color: rgba(255, 255, 255, 0.72);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(199, 164, 90, 0.88),
+            rgba(1, 6, 3, 0.85)
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-shadow:
+        0 1px 10px rgba(199, 164, 90, 0.12);
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    min-width: 0;
+}
+
+.desktop-nav a {
+    position: relative;
+
+    padding: 6px 0;
+
+    color: rgba(255, 255, 255, 0.76);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: -0.01em;
+
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+.desktop-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold-light);
+
+    transition: width 0.3s var(--ease);
+}
+
+.desktop-nav a:hover {
+    color: var(--white);
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a.active::after {
+    width: 100%;
+}
+
+.desktop-nav a.active {
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    background: rgba(7, 26, 53, 0.48);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 17px;
+    height: 1.5px;
+
+    background: var(--white);
+
+    transition:
+        transform 0.3s var(--ease),
+        opacity 0.2s ease;
+}
+
+.mobile-nav {
+    display: none;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(4, 17, 38, 0.94);
+
+    backdrop-filter:
+        blur(25px)
+        saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(25px)
+        saturate(140%);
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav-inner {
+    display: flex;
+    flex-direction: column;
+
+    padding: 4px 20px 8px;
+}
+
+.mobile-nav a {
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    letter-spacing: -0.01em;
+}
+
+.mobile-nav a:last-child {
+    border-bottom: 0;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+    color: var(--gold-light);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.home-hero {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: 680px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: var(--black);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.hero-image video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    object-fit: cover;
+    object-position: center center;
+
+    background: var(--black);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.70) 0%,
+            rgba(0, 0, 0, 0.46) 40%,
+            rgba(0, 0, 0, 0.18) 75%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+}
+
+.hero-content {
+    position: absolute;
+
+    left: 7%;
+    top: 53%;
+
+    z-index: 2;
+
+    width: 620px;
+    max-width: 84%;
+
+    transform: translateY(-50%);
+}
+
+.hero-content::before {
+    content: "";
+
+    position: absolute;
+
+    left: -24px;
+    top: 0;
+
+    width: 1px;
+    height: 230px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(199, 164, 90, 0.25),
+            rgba(199, 164, 90, 0.95) 12%,
+            rgba(199, 164, 90, 0.95) 88%,
+            rgba(199, 164, 90, 0.25)
+        );
+}
+
+.hero-content .eyebrow {
+    position: relative;
+    top: 0;
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    margin: 0;
+
+    color: rgba(205, 208, 211, 0.92);
+
+    -webkit-text-fill-color: rgba(205, 208, 211, 0.92);
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.35),
+        0 0 8px rgba(255, 255, 255, 0.12);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 72px;
+    font-weight: 600;
+
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+}
+
+.hero-description {
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 20px;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.8;
+    letter-spacing: 0;
+}
+
+.hero-actions {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+.hero-actions .button-primary {
+    background: rgba(7, 26, 53, 0.58);
+
+    color: #FAF6EE;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-actions .button-light {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(205, 208, 211, 0.38),
+            rgba(199, 164, 90, 0.38)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    color: #FAF6EE;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding: 0 19px;
+
+    border-radius: 999px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.03em;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.button-primary {
+    color: var(--navy);
+    background: var(--gold);
+}
+
+.button-primary:hover {
+    background: var(--gold-light);
+}
+
+.button-light {
+    color: var(--white);
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.button-light:hover {
+    color: var(--navy);
+    background: var(--white);
+}
+
+.hero-scroll {
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.hero-scroll i {
+    color: var(--gold);
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MORE THAN TAILORING
+   ========================================================= */
+
+.intro-section {
+    width: 100%;
+
+    padding: 90px 5% 95px;
+
+    background: var(--white);
+
+    text-align: center;
+}
+
+.intro-inner {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+.intro-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--gold);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.intro-section h2 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.intro-text {
+    width: 100%;
+    max-width: 640px;
+
+    margin: 18px auto 0;
+
+    color: var(--text-soft);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   INTRO HIGHLIGHTS
+   ========================================================= */
+
+.intro-highlights {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 42px;
+
+    border-top: 1px solid rgba(7, 26, 53, 0.12);
+    border-bottom: 1px solid rgba(7, 26, 53, 0.12);
+}
+
+.intro-highlight {
+    width: 100%;
+    min-height: 62px;
+
+    padding: 14px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+}
+
+.intro-highlight + .intro-highlight {
+    border-left: 1px solid rgba(7, 26, 53, 0.12);
+}
+
+.intro-highlight i {
+    color: var(--gold);
+    font-size: 14px;
+}
+
+.intro-highlight span {
+    color: var(--navy);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WHAT WE DO
+   ========================================================= */
+
+.core-section {
+    padding: 82px 7% 90px;
+
+    background: #f6f3ed;
+}
+
+.core-section .section-heading {
+    max-width: 1050px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.core-section .section-heading::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin: 0 auto 10px;
+
+    background: var(--gold);
+
+    opacity: 0.75;
+}
+
+.core-section .section-heading .eyebrow {
+    display: block;
+
+    margin: 0 0 12px;
+
+    color: var(--gold);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.core-section .section-heading h2 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   WHAT WE DO — CARDS
+   ========================================================= */
+
+.core-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.core-card {
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: var(--navy);
+
+    border: 1px solid rgba(199, 164, 90, 0.65);
+
+    border-radius: 64px 64px 34px 34px;
+}
+
+.core-card:nth-child(2) {
+    border-radius: 34px 34px 64px 64px;
+}
+
+.core-card:nth-child(3) {
+    grid-column: 1 / -1;
+
+    height: 230px;
+
+    border-radius: 72px 72px 42px 42px;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+   ========================================================= */
+
+.core-image {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+}
+
+.core-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   CARD GRADIENT
+   ========================================================= */
+
+.core-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 17, 38, 0) 30%,
+            rgba(4, 17, 38, 0.08) 48%,
+            rgba(4, 17, 38, 0.82) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.core-content {
+    position: absolute;
+
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+
+    display: block;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    box-shadow: none;
+}
+
+.core-number {
+    margin: 0 0 4px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+.core-content h3 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+.core-content h4 {
+    margin: 6px 0 0;
+
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+.core-content .text-link {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLET
+   SERVICES TYPOGRAPHY REFERENCE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nav-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .desktop-nav {
+        gap: 20px;
+    }
+
+    .desktop-nav a {
+        font-size: 12px;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .brand img {
+        height: 46px;
+    }
+
+    .home-hero {
+        height: 610px;
+    }
+
+    .hero-content {
+        left: 6%;
+
+        width: 560px;
+        max-width: 82%;
+    }
+
+    .hero-content::before {
+        left: -18px;
+        height: 215px;
+    }
+
+    .hero-content .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 12px;
+
+        letter-spacing: 0.18em;
+        line-height: 1.4;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+
+        line-height: 1.04;
+        letter-spacing: -0.035em;
+    }
+
+    .hero-description {
+        max-width: 470px;
+
+        margin-top: 18px;
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .hero-actions {
+        gap: 9px;
+        margin-top: 25px;
+    }
+
+    .button {
+        min-height: 44px;
+
+        padding: 0 18px;
+
+        font-size: 12px;
+    }
+
+    .hero-scroll {
+        right: 25px;
+        bottom: 22px;
+
+        font-size: 9px;
+    }
+
+
+    /* INTRO */
+
+    .intro-section {
+        padding: 85px 5% 90px;
+    }
+
+    .intro-label {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .intro-section h2 {
+        font-size: 40px;
+        line-height: 1.05;
+    }
+
+    .intro-text {
+        max-width: 620px;
+
+        margin-top: 18px;
+
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .intro-highlights {
+        grid-template-columns: repeat(2, 1fr);
+
+        margin-top: 38px;
+    }
+
+    .intro-highlight {
+        min-height: 62px;
+        padding: 14px 12px;
+    }
+
+    .intro-highlight:nth-child(3) {
+        border-left: none;
+
+        border-top: 1px solid rgba(7, 26, 53, 0.12);
+    }
+
+    .intro-highlight:nth-child(4) {
+        border-top: 1px solid rgba(7, 26, 53, 0.12);
+    }
+
+
+    /* WHAT WE DO */
+
+    .core-section {
+        padding: 75px 5% 82px;
+    }
+
+    .core-section .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .core-section .section-heading::before {
+        width: 60px;
+        height: 1.5px;
+
+        margin-bottom: 10px;
+    }
+
+    .core-section .section-heading .eyebrow {
+        margin-bottom: 12px;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        letter-spacing: 0.18em;
+        line-height: 1.4;
+    }
+
+    .core-section .section-heading h2 {
+        font-size: 42px;
+        font-weight: 600;
+
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+    }
+}
+
+
+/* =========================================================
+   PORTRAIT PHONES
+   MOBILE VALUES KEPT
+   ========================================================= */
+
+@media (max-width: 850px) and (orientation: portrait) {
+
+    .site-header {
+        height: 68px;
+    }
+
+    .nav-container {
+        height: 70px;
+        min-height: 70px;
+
+        padding-left: 16px;
+        padding-right: 14px;
+
+        gap: 12px;
+    }
+
+    .brand {
+        gap: 9px;
+        font-size: 17px;
+    }
+
+    .brand img {
+        height: 43px;
+    }
+
+    .brand span {
+        font-size: 17px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .home-hero {
+        height: 580px;
+    }
+
+    .hero-image video {
+        object-position: center 40%;
+    }
+
+    .hero-content {
+        left: 6%;
+        top: 55%;
+
+        width: 88%;
+        max-width: 400px;
+    }
+
+    .hero-content::before {
+        left: -13px;
+        height: 200px;
+    }
+
+    .hero-content .eyebrow {
+        position: relative;
+        top: -18px;
+
+        margin-bottom: 10px;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+        letter-spacing: 0.11em;
+    }
+
+    .hero-content h1 {
+        font-size: 54px;
+
+        line-height: 0.89;
+        letter-spacing: -0.01em;
+    }
+
+    .hero-description {
+        max-width: 360px;
+
+        margin-top: 17px;
+
+        font-size: 12px;
+
+        line-height: 1.58;
+    }
+
+    .hero-actions {
+        margin-top: 22px;
+        gap: 8px;
+    }
+
+    .button {
+        min-height: 42px;
+
+        padding: 0 15px;
+
+        font-size: 10.5px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+
+    /* =====================================================
+       INTRO — MOBILE
+       ===================================================== */
+
+    .intro-section {
+        padding: 70px 20px 65px;
+    }
+
+    .intro-label {
+        margin-bottom: 10px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.17em;
+        line-height: 1.4;
+    }
+
+    .intro-section h2 {
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .intro-text {
+        max-width: 600px;
+
+        margin-top: 16px;
+
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .intro-highlights {
+        grid-template-columns: repeat(2, 1fr);
+
+        margin-top: 32px;
+    }
+
+    .intro-highlight {
+        min-height: 58px;
+
+        padding: 12px 8px;
+
+        gap: 7px;
+    }
+
+    .intro-highlight + .intro-highlight {
+        border-left: 1px solid rgba(7, 26, 53, 0.12);
+        border-top: none;
+    }
+
+    .intro-highlight:nth-child(3),
+    .intro-highlight:nth-child(4) {
+        border-top: 1px solid rgba(7, 26, 53, 0.12);
+    }
+
+    .intro-highlight:nth-child(3) {
+        border-left: none;
+    }
+
+    .intro-highlight i {
+        font-size: 13px;
+    }
+
+    .intro-highlight span {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       WHAT WE DO — MOBILE
+       ===================================================== */
+
+    .core-section {
+        padding: 56px 20px 62px;
+    }
+
+    .core-section .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .core-section .section-heading::before {
+        width: 52px;
+        height: 1px;
+
+        margin-bottom: 19px;
+    }
+
+    .core-section .section-heading .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.16em;
+        line-height: 1.4;
+    }
+
+    .core-section .section-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.1;
+    }
+
+    .core-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .core-card {
+        height: 235px;
+
+        border-radius: 44px 44px 24px 24px;
+    }
+
+    .core-card:nth-child(2) {
+        border-radius: 24px 24px 44px 44px;
+    }
+
+    .core-card:nth-child(3) {
+        grid-column: 1 / -1;
+
+        height: 175px;
+
+        border-radius: 55px 55px 32px 32px;
+    }
+
+    .core-content {
+        left: 12px;
+        right: 12px;
+        bottom: 13px;
+    }
+
+    .core-number {
+        margin-bottom: 3px;
+
+        font-size: 8px;
+    }
+
+    .core-content h3 {
+        font-size: 13px;
+    }
+
+    .core-content h4 {
+        margin-top: 4px;
+
+        font-size: 8px;
+    }
+
+    .core-content .text-link {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONES
+   ========================================================= */
+
+@media (max-width: 850px) and (orientation: landscape) {
+
+    .site-header {
+        height: 64px;
+    }
+
+    .nav-container {
+        height: 64px;
+        min-height: 64px;
+
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .brand {
+        gap: 7px;
+    }
+
+    .brand img {
+        height: 34px;
+    }
+
+    .brand span {
+        font-size: 15px;
+    }
+
+    .desktop-nav {
+        display: flex;
+        gap: 10px;
+    }
+
+    .desktop-nav a {
+        padding: 5px 0;
+
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .home-hero {
+        height: 500px;
+    }
+
+    .hero-image video {
+        object-position: center center;
+    }
+
+    .hero-content {
+        left: 6%;
+        top: 54%;
+
+        width: 62%;
+        max-width: 540px;
+    }
+
+    .hero-content::before {
+        left: -13px;
+        height: 185px;
+    }
+
+    .hero-content .eyebrow {
+        position: relative;
+        top: -8px;
+
+        margin-bottom: 8px;
+
+        font-size: 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 56px;
+        line-height: 0.92;
+    }
+
+    .hero-description {
+        max-width: 420px;
+
+        margin-top: 14px;
+
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .hero-actions {
+        margin-top: 17px;
+    }
+
+    .button {
+        min-height: 38px;
+
+        padding: 0 14px;
+
+        font-size: 9.5px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .intro-section {
+        padding: 60px 18px 55px;
+    }
+
+    .intro-label {
+        margin-bottom: 9px;
+
+        font-size:9px;
+        letter-spacing: 0.15em;
+    }
+
+    .intro-section h2 {
+        font-size: 33px;
+        line-height: 1.08;
+    }
+
+    .intro-text {
+        margin-top: 15px;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .intro-highlights {
+        margin-top: 28px;
+    }
+
+    .intro-highlight {
+        min-height: 55px;
+
+        padding: 10px 6px;
+
+        gap: 6px;
+    }
+
+    .intro-highlight i {
+        font-size: 12px;
+    }
+
+    .intro-highlight span {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PORTRAIT
+   ========================================================= */
+
+@media (max-width: 360px) and (orientation: portrait) {
+
+    .brand span {
+        font-size: 14px;
+    }
+
+    .brand img {
+        height: 36px;
+    }
+
+    .hero-content {
+        left: 7%;
+        width: 86%;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        max-width: 300px;
+
+        font-size: 10.5px;
+    }
+
+    .hero-actions {
+        gap: 6px;
+    }
+
+    .button {
+        min-height: 39px;
+
+        padding: 0 12px;
+
+        font-size: 9.5px;
+    }
+}
+
+
+/* =========================================================
+   OVERFLOW PROTECTION
+   ========================================================= */
+
+.site-header,
+.nav-container,
+.home-hero,
+.hero-image,
+.hero-image video {
+    max-width: 100%;
+}
+
+.site-header,
+.nav-container,
+.home-hero,
+.hero-image,
+.hero-image video {
+    transform: none;
+}
+/* =========================================================
+   CRAFT / CREATE SECTION
+   ========================================================= */
+
+.create-section {
+    position: relative;
+
+    padding: 82px 7% 90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 26, 53, 0.72),
+            rgba(7, 26, 53, 0.58)
+        );
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.18);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.create-section .section-heading {
+    max-width: 1050px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.create-section .section-heading::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin: 0 auto 10px;
+
+    background: var(--gold);
+
+    opacity: 0.75;
+}
+
+.create-section .section-heading .eyebrow {
+    display: block;
+
+    margin: 0 0 12px;
+
+    color: var(--gold);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.create-section .section-heading h2 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.create-section .section-intro {
+    max-width: 640px;
+
+    margin: 18px auto 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CRAFT GRID
+   ========================================================= */
+
+.create-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CRAFT CARD
+   ========================================================= */
+
+.create-item {
+    position: relative;
+
+    height: 320px;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    display: block;
+
+    background: var(--navy);
+
+    border: 1px solid rgba(199, 164, 90, 0.65);
+
+    border-radius: 64px 64px 34px 34px;
+}
+
+.create-item:nth-child(2) {
+    border-radius: 34px 34px 64px 64px;
+}
+
+.create-item:nth-child(3) {
+    border-radius: 72px 72px 42px 42px;
+}
+
+.create-item:nth-child(4) {
+    border-radius: 42px 42px 72px 72px;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.create-image {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+}
+
+.create-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   DARK IMAGE GRADIENT
+   ========================================================= */
+
+.create-item::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 17, 38, 0) 30%,
+            rgba(4, 17, 38, 0.08) 48%,
+            rgba(4, 17, 38, 0.82) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TEMPORARY PLACEHOLDER
+   ========================================================= */
+
+.create-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 34px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.create-content {
+    position: absolute;
+
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* Card title */
+
+.create-content span {
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 27px;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+/* Arrow */
+
+.create-content i {
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(199, 164, 90, 0.75);
+
+    border-radius: 50%;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SECTION ACTION
+   ========================================================= */
+
+.create-section .section-action {
+    margin-top: 38px;
+
+    text-align: center;
+}
+
+.create-section .section-action .text-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(199, 164, 90, 0.42),
+            rgba(118, 41, 68, 0.62)
+        );
+
+    border: 1px solid rgba(199, 164, 90, 0.65);
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.create-section .section-action .text-link i {
+    color: var(--gold-light);
+
+    font-size: 10px;
+}
+
+.create-section .section-action .text-link:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(199, 164, 90, 0.58),
+            rgba(118, 41, 68, 0.78)
+        );
+
+    border-color: rgba(199, 164, 90, 0.9);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+   SAME TYPOGRAPHY REFERENCE AS SERVICES
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .create-section {
+        padding: 75px 5% 82px;
+    }
+
+    .create-section .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .create-section .section-heading::before {
+        width: 60px;
+        height: 1.5px;
+
+        margin-bottom: 10px;
+    }
+
+    .create-section .section-heading .eyebrow {
+        margin-bottom: 12px;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        letter-spacing: 0.18em;
+        line-height: 1.4;
+    }
+
+    .create-section .section-heading h2 {
+        font-size: 42px;
+        font-weight: 600;
+
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+    }
+
+    .create-section .section-intro {
+        max-width: 620px;
+
+        margin-top: 18px;
+
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   KEEPING YOUR HOME MOBILE SIZING
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .create-section {
+        padding: 56px 20px 62px;
+    }
+
+    .create-section .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .create-section .section-heading::before {
+        width: 52px;
+        height: 1px;
+
+        margin-bottom: 19px;
+    }
+
+    .create-section .section-heading .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.16em;
+        line-height: 1.4;
+    }
+
+    .create-section .section-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.1;
+    }
+
+    .create-section .section-intro {
+        margin-top: 15px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Grid */
+
+    .create-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+
+    /* Cards */
+
+    .create-item {
+        height: 235px;
+
+        border-radius: 44px 44px 24px 24px;
+    }
+
+    .create-item:nth-child(2) {
+        border-radius: 24px 24px 44px 44px;
+    }
+
+    .create-item:nth-child(3) {
+        border-radius: 55px 55px 32px 32px;
+    }
+
+    .create-item:nth-child(4) {
+        border-radius: 32px 32px 55px 55px;
+    }
+
+
+    /* Content */
+
+    .create-content {
+        left: 12px;
+        right: 12px;
+        bottom: 13px;
+
+        gap: 8px;
+    }
+
+    .create-content span {
+        font-size: 14px;
+    }
+
+    .create-content i {
+        width: 28px;
+        height: 28px;
+
+        font-size: 9px;
+    }
+
+
+    /* Button */
+
+    .create-section .section-action .text-link {
+        padding: 11px 18px;
+
+        gap: 8px;
+
+        font-size: 11px;
+    }
+
+    .create-section .section-action .text-link i {
+        font-size: 9px;
+    }
+}
+/* =========================================================
+   FABRICS SECTION
+   ========================================================= */
+
+.fabrics-section {
+    position: relative;
+    padding: 82px 7% 90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(118, 41, 68, 0.88),
+            rgba(76, 25, 45, 0.72)
+        );
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.2);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.fabrics-section .section-heading {
+    max-width: 1050px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.fabrics-section .section-heading::before {
+    content: "";
+    display: block;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin: 0 auto 10px;
+
+    background: var(--gold);
+    opacity: 0.75;
+}
+
+.fabrics-section .section-heading .eyebrow {
+    display: block;
+
+    margin: 0 auto 12px;
+
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.fabrics-section .section-heading h2 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+
+    text-align: center;
+}
+
+.fabrics-section .section-intro {
+    max-width: 640px;
+
+    margin: 18px auto 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .fabrics-section {
+        padding: 75px 5% 82px;
+    }
+
+    .fabrics-section .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .fabrics-section .section-heading .eyebrow {
+        font-size: 12px;
+    }
+
+    .fabrics-section .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .fabrics-section .section-intro {
+        font-size: 15px;
+    }
+
+    .fabrics-grid {
+        gap: 15px;
+    }
+
+    .fabric-card {
+        height: 320px;
+    }
+}
+
+
+/* =========================================================
+   FABRICS CARDS
+   ========================================================= */
+
+.fabrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.fabric-card {
+    position: relative;
+
+    height: 360px;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    display: block;
+
+    background: var(--navy);
+
+    border: 1px solid rgba(199, 164, 90, 0.6);
+
+    border-radius: 42px 42px 18px 18px;
+
+    text-decoration: none;
+}
+
+.fabric-card:nth-child(2) {
+    border-radius: 18px 18px 42px 42px;
+}
+
+.fabric-card:nth-child(3) {
+    border-radius: 18px 42px 18px 42px;
+}
+
+.fabric-card:nth-child(4) {
+    border-radius: 42px 18px 42px 18px;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.fabric-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.fabric-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   DARK GRADIENT
+   ========================================================= */
+
+.fabric-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 17, 38, 0) 30%,
+            rgba(4, 17, 38, 0.08) 50%,
+            rgba(4, 17, 38, 0.86) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TEXT DIRECTLY ON CARD
+   ========================================================= */
+
+.fabric-content {
+    position: absolute;
+
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+    border-radius: 0;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    box-shadow: none;
+}
+
+.fabric-category {
+    display: block;
+
+    margin: 0 0 5px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.fabric-name {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.fabric-price {
+    margin: 6px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   VIEW ALL FABRICS
+   ========================================================= */
+
+.fabrics-section .section-action {
+    margin-top: 38px;
+
+    text-align: center;
+}
+
+.fabrics-section .section-action .text-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 23px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 26, 53, 0.72),
+            rgba(199, 164, 90, 0.38)
+        );
+
+    border: 1px solid rgba(199, 164, 90, 0.7);
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.fabrics-section .section-action .text-link i {
+    color: var(--gold-light);
+    font-size: 10px;
+}
+
+.fabrics-section .section-action .text-link:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 26, 53, 0.88),
+            rgba(199, 164, 90, 0.52)
+        );
+
+    border-color: rgba(199, 164, 90, 0.95);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .fabrics-section {
+        padding: 56px 20px 62px;
+    }
+
+    .fabrics-section .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .fabrics-section .section-heading::before {
+        width: 52px;
+        height: 1px;
+
+        margin-bottom: 19px;
+    }
+
+    .fabrics-section .section-heading .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+        letter-spacing: 0.16em;
+    }
+
+    .fabrics-section .section-heading h2 {
+        font-size: 28px;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
+    }
+
+    .fabrics-section .section-intro {
+        max-width: 100%;
+
+        margin-top: 15px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* FABRIC GRID */
+
+    .fabrics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .fabric-card {
+        height: 235px;
+
+        border-radius: 30px 30px 14px 14px;
+    }
+
+    .fabric-card:nth-child(2) {
+        border-radius: 14px 14px 30px 30px;
+    }
+
+    .fabric-card:nth-child(3) {
+        border-radius: 14px 30px 14px 30px;
+    }
+
+    .fabric-card:nth-child(4) {
+        border-radius: 30px 14px 30px 14px;
+    }
+
+
+    /* CARD CONTENT */
+
+    .fabric-content {
+        left: 12px;
+        right: 12px;
+        bottom: 13px;
+    }
+
+    .fabric-category {
+        margin-bottom: 3px;
+
+        font-size: 7px;
+    }
+
+    .fabric-name {
+        font-size: 15px;
+    }
+
+    .fabric-price {
+        margin-top: 4px;
+
+        font-size: 8px;
+    }
+
+
+    /* VIEW ALL */
+
+    .fabrics-section .section-action {
+        margin-top: 30px;
+    }
+
+    .fabrics-section .section-action .text-link {
+        gap: 8px;
+
+        padding: 11px 19px;
+
+        font-size: 11px;
+    }
+
+    .fabrics-section .section-action .text-link i {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .fabrics-section {
+        padding: 50px 16px 55px;
+    }
+
+    .fabrics-section .section-heading {
+        margin-bottom: 27px;
+    }
+
+    .fabrics-section .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .fabrics-section .section-intro {
+        font-size: 13px;
+    }
+
+    .fabric-card {
+        height: 220px;
+    }
+
+    .fabric-name {
+        font-size: 14px;
+    }
+
+    .fabric-category {
+        font-size: 6.5px;
+    }
+
+    .fabric-price {
+        font-size: 7.5px;
+    }
+}
+
+/* =====================================================
+   TRAINING SECTION
+====================================================== */
+
+.training-section {
+    position: relative;
+
+    padding: 82px 7% 90px;
+
+    background: #f6f3ed;
+
+    border-top: 1px solid rgba(118, 41, 68, 0.12);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.2);
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TRAINING IMAGE / CAP AREA
+====================================================== */
+
+.training-image {
+    position: relative;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 26, 53, 0.94),
+            rgba(118, 41, 68, 0.82)
+        );
+
+    border: 1px solid rgba(199, 164, 90, 0.65);
+
+    border-radius: 72px 72px 34px 34px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TRAINING LOGO PLACEHOLDER
+====================================================== */
+
+.training-image-placeholder {
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold-light);
+    font-size: 58px;
+}
+
+.training-image-placeholder i {
+    display: none;
+}
+
+.training-image-placeholder::before {
+    content: "";
+
+    width: 150px;
+    height: 150px;
+
+    background:
+        url("logo.png")
+        center / contain
+        no-repeat;
+
+    display: block;
+}
+
+
+/* =====================================================
+   TRAINING CONTENT
+====================================================== */
+
+.training-content {
+    max-width: 620px;
+}
+
+
+/* =====================================================
+   GOLD DIVIDER
+====================================================== */
+
+.training-content::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin-bottom: 10px;
+
+    background: var(--gold);
+
+    opacity: 0.75;
+}
+
+
+/* =====================================================
+   EYEBROW
+====================================================== */
+
+.training-content .eyebrow {
+    display: block;
+
+    margin: 0 0 12px;
+
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HEADING
+====================================================== */
+
+.training-content h2 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+====================================================== */
+
+.training-content > p:not(.eyebrow) {
+    max-width: 560px;
+
+    margin: 18px 0 0;
+
+    color: rgba(23, 32, 51, 0.72);
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   BUTTON
+====================================================== */
+
+.training-content .button {
+    margin-top: 28px;
+}
+
+
+/* =====================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 900px) {
+
+    .training-section {
+        padding: 75px 5% 82px;
+
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 45px;
+    }
+
+    .training-image {
+        min-height: 330px;
+
+        border-radius: 58px 58px 30px 30px;
+    }
+
+    .training-image-placeholder {
+        min-height: 330px;
+    }
+
+    .training-image-placeholder::before {
+        width: 125px;
+        height: 125px;
+    }
+
+    .training-content .eyebrow {
+        font-size: 12px;
+    }
+
+    .training-content h2 {
+        font-size: 42px;
+    }
+
+    .training-content > p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+    .training-section {
+        padding: 56px 20px 62px;
+
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+    }
+
+
+    /* IMAGE */
+
+    .training-image {
+        min-height: 200px;
+
+        border-radius: 52px 52px 28px 28px;
+    }
+
+    .training-image-placeholder {
+        min-height: 190px;
+    }
+
+    .training-image-placeholder::before {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /* CONTENT */
+
+    .training-content {
+        max-width: none;
+
+        text-align: center;
+    }
+
+
+    /* DIVIDER */
+
+    .training-content::before {
+        width: 52px;
+
+        height: 1px;
+
+        margin: 0 auto 19px;
+    }
+
+
+    /* EYEBROW */
+
+    .training-content .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.16em;
+    }
+
+
+    /* HEADING */
+
+    .training-content h2 {
+        font-size: 28px;
+
+        line-height: 1.1;
+
+        letter-spacing: -0.025em;
+    }
+
+
+    /* DESCRIPTION */
+
+    .training-content > p:not(.eyebrow) {
+        max-width: 100%;
+
+        margin-top: 15px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* BUTTON */
+
+    .training-content .button {
+        margin-top: 24px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 420px) {
+
+    .training-section {
+        padding: 50px 16px 55px;
+
+        gap: 30px;
+    }
+
+    .training-image {
+        min-height: 180px;
+
+        border-radius: 44px 44px 24px 24px;
+    }
+
+    .training-image-placeholder {
+        min-height: 170px;
+    }
+
+    .training-image-placeholder::before {
+        width: 85px;
+        height: 85px;
+    }
+
+    .training-content h2 {
+        font-size: 26px;
+    }
+
+    .training-content > p:not(.eyebrow) {
+        font-size: 13px;
+    }
+
+}
+
+/* =====================================================
+   PROCESS SECTION
+====================================================== */
+
+.process-section {
+    position: relative;
+
+    padding: 82px 7% 90px;
+
+    background: #f6f3ed;
+
+    border-top: 1px solid rgba(118, 41, 68, 0.12);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.2);
+}
+
+
+/* =====================================================
+   PROCESS HEADING
+====================================================== */
+
+.process-heading {
+    max-width: 1050px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.process-heading::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin: 0 auto 10px;
+
+    background: var(--gold);
+
+    opacity: 0.75;
+}
+
+.process-heading .eyebrow {
+    display: block;
+
+    margin: 0 0 12px;
+
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.process-heading h2 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+
+/* =====================================================
+   PROCESS LIST
+====================================================== */
+
+.process-list {
+    display: grid;
+
+    gap: 12px;
+}
+
+.process-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 16px 20px;
+
+    border-radius: 22px;
+
+    text-decoration: none;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(199, 164, 90, 0.32);
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =====================================================
+   PROCESS ITEM BACKGROUNDS
+====================================================== */
+
+/* 01 — Gold glass */
+
+.process-item:nth-child(1) {
+    background: rgba(199, 164, 90, 0.13);
+
+    border-color: rgba(199, 164, 90, 0.38);
+}
+
+
+/* 02 — Wine glass */
+
+.process-item:nth-child(2) {
+    background: rgba(118, 41, 68, 0.12);
+
+    border-color: rgba(118, 41, 68, 0.32);
+}
+
+
+/* 03 — Navy glass */
+
+.process-item:nth-child(3) {
+    background: rgba(20, 33, 61, 0.10);
+
+    border-color: rgba(20, 33, 61, 0.28);
+}
+
+
+/* 04 — Champagne glass */
+
+.process-item:nth-child(4) {
+    background: rgba(244, 244, 245, 0.32);
+
+    border-color: rgba(199, 164, 90, 0.25);
+}
+
+
+/* =====================================================
+   PROCESS NUMBER
+====================================================== */
+
+.process-number {
+    flex-shrink: 0;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =====================================================
+   PROCESS TITLE
+====================================================== */
+
+.process-item h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+/* =====================================================
+   PROCESS DESCRIPTION
+====================================================== */
+
+.process-item p {
+    margin: 4px 0 0;
+
+    color: rgba(23, 32, 51, 0.68);
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 900px) {
+
+    .process-section {
+        padding: 75px 5% 82px;
+    }
+
+    .process-heading {
+        margin-bottom: 38px;
+    }
+
+    .process-heading .eyebrow {
+        font-size: 12px;
+    }
+
+    .process-heading h2 {
+        font-size: 42px;
+    }
+
+    .process-list {
+        gap: 11px;
+    }
+
+    .process-item {
+        gap: 16px;
+
+        padding: 15px 18px;
+    }
+
+    .process-item h3 {
+        font-size: 22px;
+    }
+
+    .process-item p {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+    .process-section {
+        padding: 56px 20px 62px;
+    }
+
+    .process-heading {
+        margin-bottom: 30px;
+    }
+
+    .process-heading::before {
+        width: 52px;
+        height: 1px;
+
+        margin-bottom: 19px;
+    }
+
+    .process-heading .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.16em;
+    }
+
+    .process-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.1;
+
+        letter-spacing: -0.025em;
+    }
+
+
+    /* PROCESS LIST */
+
+    .process-list {
+        gap: 10px;
+    }
+
+    .process-item {
+        gap: 12px;
+
+        padding: 14px 15px;
+
+        border-radius: 18px;
+    }
+
+    .process-number {
+        font-size: 8px;
+    }
+
+    .process-item h3 {
+        font-size: 18px;
+    }
+
+    .process-item p {
+        margin-top: 3px;
+
+        font-size: 10px;
+
+        line-height: 1.45;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 420px) {
+
+    .process-section {
+        padding: 50px 16px 55px;
+    }
+
+    .process-heading {
+        margin-bottom: 27px;
+    }
+
+    .process-heading h2 {
+        font-size: 26px;
+    }
+
+    .process-item {
+        gap: 10px;
+
+        padding: 13px 13px;
+
+        border-radius: 16px;
+    }
+
+    .process-item h3 {
+        font-size: 17px;
+    }
+
+    .process-item p {
+        font-size: 9.5px;
+    }
+
+}
+
+/* =====================================================
+   OUR WORK / GALLERY
+===================================================== */
+
+.gallery-section {
+    position: relative;
+
+    padding: 82px 7% 90px;
+
+    background: #f6f3ed;
+
+    border-top: 1px solid rgba(118, 41, 68, 0.12);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.2);
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.gallery-section .section-heading {
+    max-width: 1050px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.gallery-section .section-heading::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin: 0 auto 10px;
+
+    background: var(--gold);
+
+    opacity: 0.75;
+}
+
+.gallery-section .section-heading .eyebrow {
+    display: block;
+
+    margin: 0 0 12px;
+
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.gallery-section .section-heading h2 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.gallery-section .section-intro {
+    max-width: 640px;
+
+    margin: 18px auto 0;
+
+    color: rgba(23, 32, 51, 0.68);
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   GALLERY GRID
+===================================================== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   GALLERY ITEMS
+===================================================== */
+
+.gallery-grid .gallery-item {
+    position: relative;
+
+    height: 290px;
+
+    overflow: hidden;
+
+    background: var(--navy);
+
+    border: 1px solid rgba(199, 164, 90, 0.55);
+
+    border-radius: 26px 10px 26px 10px;
+}
+
+
+/* =====================================================
+   SLIGHTLY DIFFERENT SHAPES
+===================================================== */
+
+.gallery-grid .gallery-item:nth-child(2) {
+    border-radius: 10px 26px 10px 26px;
+}
+
+.gallery-grid .gallery-item:nth-child(3) {
+    border-radius: 10px 24px 24px 10px;
+}
+
+.gallery-grid .gallery-item:nth-child(4) {
+    border-radius: 24px 10px 10px 24px;
+}
+
+
+/* =====================================================
+   IMAGES
+===================================================== */
+
+.gallery-grid .gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   SUBTLE IMAGE OVERLAY
+===================================================== */
+
+.gallery-grid .gallery-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 35%;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 17, 38, 0),
+            rgba(4, 17, 38, 0.72)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   VIEW FULL GALLERY BUTTON
+===================================================== */
+
+.gallery-section .section-action {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 34px;
+}
+
+.gallery-section .section-action .button-outline {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    color: var(--navy);
+
+    background:
+        rgba(199, 164, 90, 0.12);
+
+    border: 1px solid rgba(199, 164, 90, 0.55);
+
+    border-radius: 18px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.gallery-section .section-action .button-outline i {
+    color: var(--gold);
+
+    font-size: 10px;
+}
+
+.gallery-section .section-action .button-outline:hover {
+    background:
+        rgba(199, 164, 90, 0.22);
+
+    border-color:
+        rgba(199, 164, 90, 0.85);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .gallery-section {
+        padding: 75px 5% 82px;
+    }
+
+    .gallery-section .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .gallery-section .section-heading .eyebrow {
+        font-size: 12px;
+    }
+
+    .gallery-section .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .gallery-section .section-intro {
+        font-size: 15px;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+
+    .gallery-grid .gallery-item {
+        height: 260px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 56px 20px 62px;
+    }
+
+    .gallery-section .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .gallery-section .section-heading::before {
+        width: 52px;
+        height: 1px;
+
+        margin-bottom: 19px;
+    }
+
+    .gallery-section .section-heading .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.16em;
+    }
+
+    .gallery-section .section-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.1;
+
+        letter-spacing: -0.025em;
+    }
+
+    .gallery-section .section-intro {
+        margin-top: 15px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* GALLERY GRID */
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .gallery-grid .gallery-item {
+        height: 195px;
+
+        border-radius: 20px 8px 20px 8px;
+    }
+
+    .gallery-grid .gallery-item:nth-child(2) {
+        border-radius: 8px 20px 8px 20px;
+    }
+
+    .gallery-grid .gallery-item:nth-child(3) {
+        border-radius: 8px 18px 18px 8px;
+    }
+
+    .gallery-grid .gallery-item:nth-child(4) {
+        border-radius: 18px 8px 8px 18px;
+    }
+
+
+    /* BUTTON */
+
+    .gallery-section .section-action {
+        margin-top: 26px;
+    }
+
+    .gallery-section .section-action .button-outline {
+        padding: 11px 18px;
+
+        gap: 8px;
+
+        border-radius: 16px;
+
+        font-size: 11px;
+    }
+
+    .gallery-section .section-action .button-outline i {
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .gallery-section {
+        padding: 50px 16px 55px;
+    }
+
+    .gallery-section .section-heading {
+        margin-bottom: 27px;
+    }
+
+    .gallery-section .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .gallery-section .section-intro {
+        font-size: 13px;
+    }
+
+    .gallery-grid {
+        gap: 8px;
+    }
+
+    .gallery-grid .gallery-item {
+        height: 180px;
+    }
+
+    .gallery-section .section-action {
+        margin-top: 24px;
+    }
+
+}
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.appointment-cta {
+    position: relative;
+    padding: 82px 7% 90px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(199, 164, 90, 0.96) 0%,
+            rgba(199, 164, 90, 0.88) 35%,
+            rgba(118, 41, 68, 0.88) 68%,
+            rgba(20, 33, 61, 0.96) 100%
+        );
+
+    border-top: 1px solid rgba(199, 164, 90, 0.35);
+    border-bottom: 1px solid rgba(20, 33, 61, 0.25);
+}
+
+.appointment-cta::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.10),
+            rgba(20, 33, 61, 0.18)
+        );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    pointer-events: none;
+}
+
+.appointment-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.appointment-content::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin: 0 auto 10px;
+
+    background: var(--white);
+
+    opacity: 0.65;
+}
+
+.appointment-content .eyebrow {
+    display: block;
+
+    margin: 0 0 12px;
+
+    color: var(--navy);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.appointment-content h2 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.appointment-content > p:not(.eyebrow) {
+    max-width: 620px;
+
+    margin: 18px auto 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CTA ACTIONS
+===================================================== */
+
+.appointment-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.appointment-actions .button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    border-radius: 16px;
+}
+
+.appointment-actions .button-primary {
+    color: var(--navy);
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.appointment-actions .button-primary i {
+    color: var(--gold);
+
+    font-size: 10px;
+}
+
+.appointment-actions .button-light {
+    color: var(--white);
+
+    background: rgba(20, 33, 61, 0.48);
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .appointment-cta {
+        padding: 75px 5% 82px;
+    }
+
+    .appointment-content {
+        max-width: 680px;
+    }
+
+    .appointment-content::before {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .appointment-content .eyebrow {
+        font-size: 12px;
+    }
+
+    .appointment-content h2 {
+        font-size: 42px;
+    }
+
+    .appointment-content > p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+    .appointment-actions {
+        margin-top: 28px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .appointment-cta {
+        padding: 56px 20px 62px;
+    }
+
+    .appointment-content {
+        max-width: 100%;
+    }
+
+    .appointment-content::before {
+        width: 52px;
+        height: 1px;
+
+        margin-bottom: 19px;
+    }
+
+    .appointment-content .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.16em;
+    }
+
+    .appointment-content h2 {
+        font-size: 28px;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
+    }
+
+    .appointment-content > p:not(.eyebrow) {
+        margin-top: 15px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .appointment-actions {
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 24px;
+    }
+
+    .appointment-actions .button {
+        width: 100%;
+
+        padding: 11px 18px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .appointment-cta {
+        padding: 50px 16px 55px;
+    }
+
+    .appointment-content h2 {
+        font-size: 26px;
+    }
+
+    .appointment-content > p:not(.eyebrow) {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .appointment-actions .button {
+        padding: 10px 16px;
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    position: relative;
+
+    padding: 70px 7% 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071A35 0%,
+            #0b1d3d 55%,
+            #301827 100%
+        );
+
+    border-top: 1px solid rgba(199, 164, 90, 0.35);
+
+    color: var(--white);
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+===================================================== */
+
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand {
+    margin-bottom: 42px;
+}
+
+.footer-brand a {
+    display: inline-block;
+
+    color: var(--white);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+}
+
+.footer-brand p {
+    margin: 9px 0 0;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer-registration {
+    display: block;
+
+    margin-top: 8px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   FOOTER SITEMAP
+===================================================== */
+
+.footer-sitemap {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 38px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.footer-group h4 {
+    margin: 0 0 15px;
+
+    color: var(--gold);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.footer-group nav {
+    display: grid;
+
+    gap: 9px;
+}
+
+.footer-group nav a {
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-group nav a:hover {
+    color: var(--gold-light);
+}
+
+
+/* =====================================================
+   FOOTER SOCIALS
+===================================================== */
+
+.footer-socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+.footer-socials a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    color: var(--white);
+
+    background: rgba(199, 164, 90, 0.10);
+
+    border: 1px solid rgba(199, 164, 90, 0.30);
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    background: rgba(118, 41, 68, 0.55);
+
+    border-color: rgba(199, 164, 90, 0.65);
+}
+
+.footer-socials i {
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 24px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   FOOTER MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding: 54px 20px 24px;
+    }
+
+
+    /* BRAND */
+
+    .footer-brand {
+        margin-bottom: 32px;
+    }
+
+    .footer-brand a {
+        margin-bottom: 3px;
+
+        font-size: 16px;
+    }
+
+    .footer-brand p {
+        margin: 0 0 3px;
+
+        font-size: 8px;
+    }
+
+    .footer-registration {
+        margin-top: 5px;
+
+        font-size: 8px;
+    }
+
+
+    /* SITEMAP */
+
+    .footer-sitemap {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 24px;
+        row-gap: 28px;
+
+        padding-bottom: 30px;
+    }
+
+    .footer-group h4 {
+        margin-bottom: 12px;
+
+        font-size: 10px;
+    }
+
+    .footer-group nav {
+        gap: 8px;
+    }
+
+    .footer-group nav a {
+        font-size: 11px;
+    }
+
+
+    /* CONTACT FULL WIDTH */
+
+    .footer-group:last-child {
+        grid-column: 1 / -1;
+    }
+
+
+    /* SOCIALS */
+
+    .footer-socials {
+        gap: 9px;
+
+        margin-top: 24px;
+    }
+
+    .footer-socials a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-socials i {
+        font-size: 12px;
+    }
+
+
+    /* BOTTOM */
+
+    .footer-bottom {
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 12px;
+
+        padding-top: 22px;
+    }
+
+    .footer-bottom p {
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   FLOATING SCROLL TO TOP
+===================================================== */
+
+.scroll-top {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #FAF6EE;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 26, 53, 0.72),
+            rgba(199, 164, 90, 0.72)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 50%;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    text-decoration: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+
+    z-index: 999;
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 26, 53, 0.85),
+            rgba(199, 164, 90, 0.85)
+        );
+
+    transform: translateY(-2px);
+}
+
+.scroll-top i {
+    font-size: 13px;
+}
