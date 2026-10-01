@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Toluwani Couture | Gallery
+</title>
+
+
+<!-- Font Awesome -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+
+<!-- Fonts -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+
+<!-- Shared Homepage Styles -->
+
+<link
+    rel="stylesheet"
+    href="home.css"
+>
+
+
+<!-- Gallery Styles -->
+
+<link
+    rel="stylesheet"
+    href="gallery.css"
+>
+
+</head>
+
+
+<body class="gallery-page">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header
+    class="site-header"
+    id="siteHeader"
+>
+
+<div class="nav-container">
+
+    <a
+        href="index.html"
+        class="brand"
+    >
+
+        <img
+            src="logo.png"
+            alt="Toluwani Couture"
+        >
+
+        <span>
+            TOLUWANI COUTURE
+        </span>
+
+    </a>
+
+
+    <nav
+        class="desktop-nav"
+        aria-label="Main navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="#">
+            Shop Fabrics
+        </a>
+
+        <a
+            href="gallery.html"
+            class="active"
+        >
+            Gallery
+        </a>
+
+        <a href="appointment.html">
+            Appointment
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+    >
+
+        <span></span>
+        <span></span>
+
+    </button>
+
+</div>
+
+
+<nav
+    class="mobile-nav"
+    id="mobileNav"
+    aria-label="Mobile navigation"
+>
+
+    <div class="mobile-nav-inner">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="#">
+            Shop Fabrics
+        </a>
+
+        <a
+            href="gallery.html"
+            class="active"
+        >
+            Gallery
+        </a>
+
+        <a href="appointment.html">
+            Appointment
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================
+     GALLERY MAIN
+========================= -->
+
+<main class="gallery-main">
+
+
+<section class="gallery-hero">
+
+    <div class="gallery-hero-container">
+
+
+        <div class="gallery-hero-logo-wrap">
+
+            <img
+                src="logo.png"
+                alt="Toluwani Couture & Textiles"
+                class="gallery-hero-logo"
+            >
+
+        </div>
+
+
+        <div class="gallery-hero-content">
+
+            <p class="gallery-eyebrow">
+                GALLERY
+            </p>
+
+            <h1 class="gallery-title">
+                The Gallery
+            </h1>
+
+            <p class="gallery-intro">
+                Explore pieces crafted with intention,
+                from traditional designs to contemporary
+                and ready-to-wear styles.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- Gallery Showcase -->
+
+<section class="full-gallery-showcase">
+
+    <div
+        class="gallery-sections"
+        id="gallerySections"
+    >
+
+        <!--
+            Gallery categories and images
+            will be loaded from Supabase.
+        -->
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     GALLERY MODAL
+========================= -->
+
+<div
+    class="full-gallery-modal"
+    id="galleryModal"
+    aria-hidden="true"
+>
+
+<div
+    class="gallery-modal-overlay"
+    id="galleryModalOverlay"
+></div>
+
+
+<div
+    class="gallery-modal-content"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="galleryModalTitle"
+>
+
+
+    <button
+        type="button"
+        class="gallery-modal-close"
+        id="galleryModalClose"
+        aria-label="Close gallery image"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <div class="gallery-modal-image">
+
+        <img
+            id="galleryModalImage"
+            src=""
+            alt=""
+        >
+
+    </div>
+
+
+    <div class="gallery-modal-details">
+
+        <p
+            id="galleryModalCategory"
+            class="gallery-modal-category"
+        ></p>
+
+
+        <h2
+            id="galleryModalTitle"
+            class="gallery-modal-title"
+        ></h2>
+
+
+        <p
+            id="galleryModalDescription"
+            class="gallery-modal-description"
+        ></p>
+
+
+        <a
+            href="appointment.html"
+            id="galleryBookButton"
+            class="gallery-book-button"
+        >
+
+            Book This Look
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+<div class="footer-container">
+
+
+    <div class="footer-brand">
+
+        <a href="index.html">
+            Toluwani Couture &amp; Textiles
+        </a>
+
+        <p>
+            Elegance Woven, Heritage Crafted.
+        </p>
+
+        <span class="footer-registration">
+            RC No: 9674768
+        </span>
+
+    </div>
+
+
+    <div class="footer-sitemap">
+
+
+        <div class="footer-group">
+
+            <h4>
+                Explore
+            </h4>
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Shop Fabrics
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="footer-group">
+
+            <h4>
+                Services
+            </h4>
+
+            <nav>
+
+                <a href="services.html">
+                    Custom Tailoring
+                </a>
+
+                <a href="#">
+                    Fabric &amp; Materials
+                </a>
+
+                <a href="training.html">
+                    Tailoring Training
+                </a>
+
+                <a href="appointment.html">
+                    Appointments
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="footer-group">
+
+            <h4>
+                Contact
+            </h4>
+
+            <nav>
+
+                <a href="appointment.html">
+                    Appointment
+                </a>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a
+                    href="https://wa.me/2349026418431"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    WhatsApp
+                </a>
+
+            </nav>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-socials">
+
+
+        <a
+            href="https://instagram.com/toluwani_couture"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+        >
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <a
+            href="https://www.tiktok.com/@toluwani_couture"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok"
+        >
+
+            <i class="fa-brands fa-tiktok"></i>
+
+        </a>
+
+
+        <a
+            href="https://wa.me/2349026418431"
+            target="_blank"
+            rel="noopener"
+            aria-label="WhatsApp"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Toluwani Couture &amp; Textiles.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================
+     SCROLL TO TOP
+========================= -->
+
+<a
+    href="#"
+    class="scroll-top"
+    id="scrollTopBtn"
+    aria-label="Scroll to top"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</a>
+
+
+
+<!-- =========================
+     SCRIPTS
+========================= -->
+
+<script src="script.js"></script>
+
+<script src="gallery.js"></script>
+
+
+</body>
+
+</html>

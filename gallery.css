@@ -1,0 +1,3020 @@
+/* =========================================================
+   GALLERY HERO
+========================================================= */
+
+.gallery-hero {
+    position: relative;
+
+    padding: 82px 7% 90px;
+
+    background: #e7e7e5;
+
+    border-top: 1px solid rgba(118, 41, 68, 0.12);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.2);
+
+    overflow: hidden;
+}
+
+
+.gallery-hero-container {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   HERO LOGO AREA
+========================================================= */
+
+.gallery-hero-logo-wrap {
+    position: relative;
+
+    width: 100%;
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 26, 53, 0.94),
+            rgba(118, 41, 68, 0.82)
+        );
+
+    border: 1px solid rgba(199, 164, 90, 0.65);
+
+    border-radius:
+        72px
+        72px
+        34px
+        34px;
+
+    overflow: hidden;
+}
+
+
+.gallery-hero-logo {
+    display: block;
+
+    width: auto;
+
+    max-width: 80%;
+
+    height: 175px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.gallery-hero-content {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.gallery-hero-content::before {
+    content: "";
+
+    display: none;
+
+    width: 60px;
+    height: 1.5px;
+
+    margin:
+        0
+        auto
+        10px;
+
+    background: var(--gold);
+
+    opacity: 0.75;
+}
+
+
+.gallery-eyebrow {
+    display: block;
+
+    margin:
+        0
+        0
+        12px;
+
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+.gallery-title {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 54px;
+
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
+}
+
+
+.gallery-intro {
+    max-width: 560px;
+
+    margin:
+        18px
+        auto
+        0;
+
+    color: rgba(23, 32, 51, 0.68);
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .gallery-hero {
+        padding:
+            75px
+            5%
+            82px;
+    }
+
+
+    .gallery-hero-container {
+        grid-template-columns:
+            0.9fr
+            1.1fr;
+
+        gap: 45px;
+    }
+
+
+    .gallery-hero-logo-wrap {
+        min-height: 330px;
+
+        border-radius:
+            58px
+            58px
+            30px
+            30px;
+    }
+
+
+    .gallery-hero-logo {
+        height: 145px;
+    }
+
+
+    .gallery-eyebrow {
+        font-size: 12px;
+    }
+
+
+    .gallery-title {
+        font-size: 38px;
+    }
+
+
+    .gallery-intro {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .gallery-hero {
+        padding:
+            70px
+            20px
+            62px;
+    }
+
+
+    .gallery-hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+    }
+
+
+    .gallery-hero-logo-wrap {
+        min-height: 210px;
+
+        border-radius:
+            52px
+            52px
+            28px
+            28px;
+    }
+
+
+    .gallery-hero-logo {
+        height: 110px;
+
+        max-width: 82%;
+    }
+
+
+    .gallery-hero-content {
+        max-width: none;
+
+        text-align: center;
+    }
+
+
+    .gallery-hero-content::before {
+        width: 52px;
+
+        height: 1px;
+
+        margin:
+            0
+            auto
+            19px;
+    }
+
+
+    .gallery-eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.16em;
+    }
+
+
+    .gallery-title {
+        font-size: 34px;
+
+        line-height: 1.1;
+
+        letter-spacing: -0.025em;
+    }
+
+
+    .gallery-intro {
+        max-width: 100%;
+
+        margin-top: 15px;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .gallery-hero {
+        padding:
+            90px
+            28px
+            68px;
+    }
+
+
+    .gallery-hero-container {
+        gap: 30px;
+    }
+
+
+    .gallery-hero-logo-wrap {
+        min-height: 190px;
+
+        border-radius:
+            44px
+            44px
+            24px
+            24px;
+    }
+
+
+    .gallery-hero-logo {
+        height: 95px;
+    }
+
+
+    .gallery-eyebrow {
+        font-size: 10px;
+    }
+
+
+    .gallery-title {
+        font-size: 30px;
+    }
+
+
+    .gallery-intro {
+        font-size: 14px;
+    }
+
+}
+/* =========================================
+   TRADITIONAL SECTION
+========================================= */
+
+.full-gallery-traditional {
+    padding: 78px 6% 90px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(199, 164, 90, 0.08),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(118, 41, 68, 0.45),
+            transparent 38%
+        ),
+        #35111f;
+
+    border-top: 1px solid rgba(199, 164, 90, 0.22);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.22);
+}
+
+
+/* Traditional introduction */
+
+.full-gallery-traditional
+.full-gallery-category-header {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.full-gallery-traditional
+.full-gallery-category-eyebrow {
+    margin: 0 0 10px;
+
+    color: #c7a45a;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.full-gallery-traditional
+.full-gallery-category-heading {
+    margin: 0;
+
+    color: #f8f2e8;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+}
+
+.full-gallery-traditional
+.full-gallery-category-intro {
+    max-width: 600px;
+    margin: 16px auto 0;
+
+    color: rgba(248, 242, 232, 0.72);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .full-gallery-traditional {
+        padding: 60px 20px 70px;
+    }
+
+    .full-gallery-traditional
+    .full-gallery-category-header {
+        margin-bottom: 38px;
+    }
+
+    .full-gallery-traditional
+    .full-gallery-category-heading {
+        font-size: 30px;
+    }
+
+    .full-gallery-traditional
+    .full-gallery-category-intro {
+        margin-top: 13px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
+
+/* =========================================
+   TRADITIONAL — CURATED CARD GRID
+========================================= */
+
+.full-gallery-traditional
+.full-gallery-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+
+/* =========================================
+   CARD BASE
+========================================= */
+
+.full-gallery-traditional
+.full-gallery-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #fff8f2;
+
+    border: 1px solid #9a3d59;
+
+    box-shadow:
+        0 12px 30px rgba(20, 5, 12, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD SHAPES
+========================================= */
+
+.full-gallery-traditional
+.full-gallery-card:nth-child(1) {
+    border-radius: 30px 14px 30px 14px;
+}
+
+.full-gallery-traditional
+.full-gallery-card:nth-child(2) {
+    border-radius: 14px 30px 14px 30px;
+}
+
+.full-gallery-traditional
+.full-gallery-card:nth-child(3) {
+    border-radius: 20px 30px 14px 30px;
+}
+
+.full-gallery-traditional
+.full-gallery-card:nth-child(4) {
+    border-radius: 30px 20px 30px 14px;
+}
+
+.full-gallery-traditional
+.full-gallery-card:nth-child(5) {
+    border-radius: 14px 30px 22px 30px;
+}
+
+.full-gallery-traditional
+.full-gallery-card:nth-child(6) {
+    border-radius: 30px 14px 30px 22px;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.full-gallery-traditional
+.full-gallery-card-image {
+    display: block;
+
+    width: 100%;
+    height: 285px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.full-gallery-traditional
+.full-gallery-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   CARD DETAILS
+========================================= */
+
+.full-gallery-traditional
+.full-gallery-card-content {
+    position: relative;
+
+    padding: 12px 48px 13px 16px;
+}
+
+
+/* Hide repeated category */
+
+.full-gallery-traditional
+.full-gallery-card-category {
+    display: none;
+}
+
+
+.full-gallery-traditional
+.full-gallery-card-title {
+    margin: 0;
+
+    color: #321522;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+
+.full-gallery-traditional
+.full-gallery-card-description {
+    display: -webkit-box;
+
+    margin: 8px 0 0;
+
+    color: rgba(50, 21, 34, 0.68);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.full-gallery-traditional
+.full-gallery-card-arrow {
+    position: absolute;
+
+    right: 17px;
+    bottom: 20px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    background: #762944;
+
+    border: 1px solid
+        rgba(199, 164, 90, 0.45);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.full-gallery-traditional
+.full-gallery-card-arrow i {
+    font-size: 11px;
+}
+
+
+.full-gallery-traditional
+.full-gallery-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 36px rgba(20, 5, 12, 0.26);
+}
+
+
+.full-gallery-traditional
+.full-gallery-card:hover
+.full-gallery-card-arrow {
+    transform: translateX(3px);
+
+    background: #8d3450;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+    .full-gallery-traditional
+    .full-gallery-grid {
+        gap: 16px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-image {
+        height: 215px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-content {
+        padding: 10px 42px 11px 13px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-title {
+        font-size: 19px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-description {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-arrow {
+        right: 11px;
+        bottom: 16px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .full-gallery-traditional
+    .full-gallery-grid {
+        gap: 12px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-image {
+        height: 180px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-content {
+        padding: 7px 20px 6px 8px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-title {
+        font-size: 16px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-description {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-arrow {
+        right: 9px;
+        bottom: 13px;
+
+        width: 27px;
+        height: 27px;
+    }
+
+
+    .full-gallery-traditional
+    .full-gallery-card-arrow i {
+        font-size: 9px;
+    }
+
+}
+/* =========================================================
+   TRADITIONAL GALLERY MODAL
+========================================================= */
+
+.full-gallery-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+
+    background: rgba(53, 17, 31, 0.88);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.full-gallery-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.full-gallery-modal .gallery-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 5, 12, 0.55);
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
+
+.full-gallery-modal .gallery-modal-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(850px, 100%);
+    height: 620px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.78fr;
+
+    overflow: hidden;
+
+    background: #fff8f2;
+
+    border: 1px solid rgba(199, 164, 90, 0.7);
+
+    border-radius: 28px 14px 28px 14px;
+
+    box-shadow:
+        0 25px 60px rgba(20, 5, 12, 0.42);
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.full-gallery-modal .gallery-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    z-index: 5;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: #ffffff;
+    background: #762944;
+
+    border: 1px solid rgba(199, 164, 90, 0.65);
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.full-gallery-modal .gallery-modal-close i {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.full-gallery-modal .gallery-modal-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #35111f;
+}
+
+.full-gallery-modal .gallery-modal-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.full-gallery-modal .gallery-modal-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.full-gallery-modal .gallery-modal-category {
+    margin: 0 0 7px;
+
+    color: #9a3d59;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.full-gallery-modal .gallery-modal-title {
+    margin: 0;
+
+    color: #321522;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1.05;
+}
+
+.full-gallery-modal .gallery-modal-description {
+    margin: 12px 0 0;
+
+    color: rgba(50, 21, 34, 0.68);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+========================================================= */
+
+.full-gallery-modal .gallery-book-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    width: fit-content;
+
+    margin-top: 18px;
+    padding: 9px 15px;
+
+    color: #ffffff;
+    background: #762944;
+
+    border: 1px solid rgba(199, 164, 90, 0.6);
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.full-gallery-modal .gallery-book-button i {
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   PAGE LOCK
+========================================================= */
+
+body.gallery-modal-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .full-gallery-modal {
+        padding: 10px;
+    }
+
+    .full-gallery-modal .gallery-modal-content {
+        width: 100%;
+        height: 82vh;
+        max-height: 620px;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 22px 12px 22px 12px;
+    }
+
+    .full-gallery-modal .gallery-modal-image {
+        flex: 1;
+        min-height: 0;
+    }
+
+    .full-gallery-modal .gallery-modal-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .full-gallery-modal .gallery-modal-details {
+        flex-shrink: 0;
+
+        padding: 16px 17px 18px;
+    }
+
+    .full-gallery-modal .gallery-modal-title {
+        font-size: 25px;
+    }
+
+    .full-gallery-modal .gallery-modal-description {
+        margin-top: 7px;
+
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .full-gallery-modal .gallery-book-button {
+        margin-top: 13px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .full-gallery-modal {
+        padding: 8px;
+    }
+
+    .full-gallery-modal .gallery-modal-content {
+        height: 80vh;
+        max-height: 560px;
+
+        border-radius: 19px 10px 19px 10px;
+    }
+
+    .full-gallery-modal .gallery-modal-details {
+        padding: 13px 14px 15px;
+    }
+
+    .full-gallery-modal .gallery-modal-category {
+        font-size: 8px;
+    }
+
+    .full-gallery-modal .gallery-modal-title {
+        font-size: 22px;
+    }
+
+    .full-gallery-modal .gallery-modal-description {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .full-gallery-modal .gallery-book-button {
+        margin-top: 11px;
+        padding: 8px 13px;
+        font-size: 10px;
+    }
+
+    .full-gallery-modal .gallery-modal-close {
+        width: 31px;
+        height: 31px;
+    }
+}
+/* =========================================
+   WEDDING COLLECTION
+========================================= */
+
+.full-gallery-wedding {
+    padding: 78px 6% 90px;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(199, 164, 90, 0.08),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(118, 41, 68, 0.05),
+            transparent 38%
+        ),
+        #f8f3eb;
+    border-top: 1px solid rgba(199, 164, 90, 0.22);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.22);
+}
+
+.full-gallery-wedding
+.full-gallery-category-header {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.full-gallery-wedding
+.full-gallery-category-eyebrow {
+    margin: 0 0 10px;
+    color: #9a7440;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.full-gallery-wedding
+.full-gallery-category-heading {
+    margin: 0;
+    color: #321522;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+}
+
+.full-gallery-wedding
+.full-gallery-category-intro {
+    max-width: 600px;
+    margin: 16px auto 0;
+    color: rgba(50, 21, 34, 0.68);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* WEDDING GRID */
+
+.full-gallery-wedding
+.full-gallery-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+}
+
+/* WEDDING CARDS */
+
+.full-gallery-wedding
+.full-gallery-card {
+    position: relative;
+    overflow: hidden;
+    background: #fffdf9;
+    border: 1px solid rgba(199, 164, 90, 0.55);
+    box-shadow: 0 12px 30px rgba(50, 21, 34, 0.10);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.full-gallery-wedding
+.full-gallery-card:nth-child(1) {
+    border-radius: 30px 14px 30px 14px;
+}
+
+.full-gallery-wedding
+.full-gallery-card:nth-child(2) {
+    border-radius: 14px 30px 14px 30px;
+}
+
+.full-gallery-wedding
+.full-gallery-card:nth-child(3) {
+    border-radius: 20px 30px 14px 30px;
+}
+
+.full-gallery-wedding
+.full-gallery-card:nth-child(4) {
+    border-radius: 30px 20px 30px 14px;
+}
+
+/* WEDDING IMAGES */
+
+.full-gallery-wedding
+.full-gallery-card-image {
+    display: block;
+    width: 100%;
+    height: 285px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.full-gallery-wedding
+.full-gallery-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* WEDDING CARD CONTENT */
+
+.full-gallery-wedding
+.full-gallery-card-content {
+    position: relative;
+    padding: 12px 48px 13px 16px;
+}
+
+.full-gallery-wedding
+.full-gallery-card-category {
+    display: none;
+}
+
+.full-gallery-wedding
+.full-gallery-card-title {
+    margin: 0;
+    color: #321522;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.full-gallery-wedding
+.full-gallery-card-description {
+    display: -webkit-box;
+    margin: 8px 0 0;
+    color: rgba(50, 21, 34, 0.68);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* WEDDING ARROW */
+
+.full-gallery-wedding
+.full-gallery-card-arrow {
+    position: absolute;
+    right: 17px;
+    bottom: 20px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #ffffff;
+    background: #762944;
+    border: 1px solid rgba(199, 164, 90, 0.65);
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.full-gallery-wedding
+.full-gallery-card-arrow i {
+    font-size: 11px;
+}
+
+.full-gallery-wedding
+.full-gallery-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(50, 21, 34, 0.15);
+}
+
+.full-gallery-wedding
+.full-gallery-card:hover
+.full-gallery-card-arrow {
+    transform: translateX(3px);
+    background: #8d3450;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .full-gallery-wedding {
+        padding: 60px 20px 70px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-category-header {
+        margin-bottom: 38px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-category-heading {
+        font-size: 30px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-category-intro {
+        margin-top: 13px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-grid {
+        gap: 16px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-image {
+        height: 215px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-content {
+        padding: 10px 42px 11px 13px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-title {
+        font-size: 19px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-description {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-arrow {
+        right: 11px;
+        bottom: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 420px) {
+
+    .full-gallery-wedding
+    .full-gallery-grid {
+        gap: 12px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-image {
+        height: 180px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-content {
+        padding: 7px 20px 6px 8px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-title {
+        font-size: 16px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-description {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-arrow {
+        right: 9px;
+        bottom: 13px;
+        width: 27px;
+        height: 27px;
+    }
+
+    .full-gallery-wedding
+    .full-gallery-card-arrow i {
+        font-size: 9px;
+    }
+}
+/* =========================================
+   WEDDING MODAL
+========================================= */
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-content {
+    background: #fffdf9;
+
+    border: 1px solid #c7a45a;
+
+    box-shadow:
+        0 25px 60px rgba(80, 65, 40, 0.18);
+}
+
+
+/* WEDDING IMAGE */
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-image {
+    background: #eee7dc;
+}
+
+
+/* WEDDING DETAILS */
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-details {
+    background: #fffdf9;
+}
+
+
+/* WEDDING CATEGORY */
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-category {
+    color: #a78345;
+}
+
+
+/* WEDDING TITLE */
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-title {
+    color: #4a4035;
+}
+
+
+/* WEDDING DESCRIPTION */
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-description {
+    color: rgba(74, 64, 53, 0.68);
+}
+
+
+/* WEDDING MODAL X */
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-close {
+    color: #5c503f;
+
+    background: #e8d8b8;
+
+    border: 1px solid #c7a45a;
+}
+
+
+/* WEDDING BOOK BUTTON */
+
+.full-gallery-modal.modal-wedding
+.gallery-book-button {
+    color: #4a4035;
+
+    background: #e8d8b8;
+
+    border: 1px solid #c7a45a;
+}
+
+
+/* WEDDING CARD ARROW */
+
+.full-gallery-wedding
+.full-gallery-card-arrow {
+    color: #4a4035;
+
+    background: #e8d8b8;
+
+    border: 1px solid #c7a45a;
+}
+
+
+.full-gallery-wedding
+.full-gallery-card:hover
+.full-gallery-card-arrow {
+    color: #4a4035;
+
+    background: #d9c59d;
+}
+/* =========================================
+   WEDDING MODAL — BACKGROUND
+========================================= */
+
+.full-gallery-modal.modal-wedding {
+    background: rgba(248, 243, 235, 0.94);
+}
+
+.full-gallery-modal.modal-wedding
+.gallery-modal-overlay {
+    background: rgba(248, 243, 235, 0.72);
+}
+/* =========================================
+   ENGLISH WEAR COLLECTION
+========================================= */
+
+.full-gallery-english-wear {
+    padding: 78px 6% 90px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(199, 164, 90, 0.07),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255, 255, 255, 0.025),
+            transparent 38%
+        ),
+        #18191b;
+
+    border-top: 1px solid rgba(199, 164, 90, 0.18);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.18);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.full-gallery-english-wear
+.full-gallery-category-header {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.full-gallery-english-wear
+.full-gallery-category-eyebrow {
+    margin: 0 0 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    color: #c7a45a;
+}
+
+.full-gallery-english-wear
+.full-gallery-category-heading {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 46px;
+    line-height: 1.05;
+    font-weight: 600;
+
+    color: #f5f1e8;
+}
+
+.full-gallery-english-wear
+.full-gallery-category-intro {
+    max-width: 680px;
+    margin: 18px auto 0;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: rgba(245, 241, 232, 0.64);
+}
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.full-gallery-english-wear
+.full-gallery-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.full-gallery-english-wear
+.full-gallery-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #222426;
+
+    border: 1px solid rgba(199, 164, 90, 0.18);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.full-gallery-english-wear
+.full-gallery-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(199, 164, 90, 0.38);
+
+    box-shadow:
+        0 24px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD SHAPES
+========================================= */
+
+.full-gallery-english-wear
+.full-gallery-card:nth-child(1) {
+    border-radius: 30px 10px 30px 10px;
+}
+
+.full-gallery-english-wear
+.full-gallery-card:nth-child(2) {
+    border-radius: 10px 30px 10px 30px;
+}
+
+.full-gallery-english-wear
+.full-gallery-card:nth-child(3) {
+    border-radius: 20px 30px 10px 30px;
+}
+
+.full-gallery-english-wear
+.full-gallery-card:nth-child(4) {
+    border-radius: 30px 20px 30px 10px;
+}
+
+.full-gallery-english-wear
+.full-gallery-card:nth-child(5) {
+    border-radius: 10px 30px 22px 30px;
+}
+
+.full-gallery-english-wear
+.full-gallery-card:nth-child(6) {
+    border-radius: 30px 12px 30px 22px;
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.full-gallery-english-wear
+.full-gallery-card-image {
+    display: block;
+
+    width: 100%;
+    height: 285px;
+
+    padding: 0;
+    border: 0;
+
+    background: #111214;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.full-gallery-english-wear
+.full-gallery-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.full-gallery-english-wear
+.full-gallery-card:hover
+.full-gallery-card-image img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.full-gallery-english-wear
+.full-gallery-card-content {
+    position: relative;
+
+    padding: 22px 24px 24px;
+
+    background: #222426;
+}
+
+.full-gallery-english-wear
+.full-gallery-card-category {
+    display: none;
+}
+
+.full-gallery-english-wear
+.full-gallery-card-title {
+    margin: 0 52px 8px 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    line-height: 1.15;
+    font-weight: 600;
+
+    color: #f5f1e8;
+}
+
+.full-gallery-english-wear
+.full-gallery-card-description {
+    margin: 0;
+    padding-right: 42px;
+
+    font-size: 14px;
+    line-height: 1.65;
+
+    color: rgba(245, 241, 232, 0.62);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CARD ARROW
+========================================= */
+
+.full-gallery-english-wear
+.full-gallery-card-arrow {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(199, 164, 90, 0.55);
+    border-radius: 50%;
+
+    background: #c7a45a;
+    color: #18191b;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.full-gallery-english-wear
+.full-gallery-card-arrow:hover {
+    transform: translateX(3px);
+
+    background: #d7b96f;
+}
+
+
+/* =========================================
+   ENGLISH WEAR MODAL
+========================================= */
+
+.full-gallery-modal.modal-english-wear {
+    background:
+        rgba(24, 25, 27, 0.94);
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-overlay {
+    background:
+        rgba(10, 11, 12, 0.72);
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-content {
+    background: #222426;
+
+    border:
+        1px solid rgba(199, 164, 90, 0.55);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-image {
+    background: #111214;
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-details {
+    background: #222426;
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-category {
+    color: #c7a45a;
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-title {
+    color: #f5f1e8;
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-description {
+    color: rgba(245, 241, 232, 0.65);
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-modal-close {
+    color: #18191b;
+
+    background: #c7a45a;
+
+    border:
+        1px solid rgba(199, 164, 90, 0.8);
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-book-button {
+    color: #18191b;
+
+    background: #c7a45a;
+
+    border:
+        1px solid #c7a45a;
+}
+
+.full-gallery-modal.modal-english-wear
+.gallery-book-button:hover {
+    background: #d7b96f;
+    border-color: #d7b96f;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .full-gallery-english-wear {
+        padding: 60px 16px 70px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-category-header {
+        margin-bottom: 30px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-category-heading {
+        font-size: 36px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-category-intro {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-image {
+        height: 215px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-content {
+        padding: 17px 16px 18px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-title {
+        font-size: 19px;
+        margin-right: 40px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-description {
+        padding-right: 32px;
+
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-arrow {
+        right: 14px;
+        bottom: 16px;
+
+        width: 32px;
+        height: 32px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .full-gallery-english-wear {
+        padding: 50px 12px 60px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-category-heading {
+        font-size: 31px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-category-intro {
+        font-size: 13px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-image {
+        height: 180px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-content {
+        padding: 14px 12px 15px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-title {
+        font-size: 16px;
+        margin-right: 34px;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-description {
+        padding-right: 26px;
+
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .full-gallery-english-wear
+    .full-gallery-card-arrow {
+        right: 10px;
+        bottom: 11px;
+
+        width: 28px;
+        height: 28px;
+
+        font-size: 10px;
+    }
+}
+/* =========================================
+   BESPOKE DRESS COLLECTION
+========================================= */
+
+.full-gallery-bespoke-dress {
+    padding: 78px 6% 90px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(199, 164, 90, 0.08),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(80, 120, 170, 0.12),
+            transparent 38%
+        ),
+        #071a35;
+
+    border-top: 1px solid rgba(199, 164, 90, 0.20);
+    border-bottom: 1px solid rgba(199, 164, 90, 0.20);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.full-gallery-bespoke-dress
+.full-gallery-category-header {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-category-eyebrow {
+    margin: 0 0 10px;
+
+    color: #c7a45a;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-category-heading {
+    margin: 0;
+
+    color: #f8f2e8;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-category-intro {
+    max-width: 600px;
+    margin: 16px auto 0;
+
+    color: rgba(248, 242, 232, 0.72);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.full-gallery-bespoke-dress
+.full-gallery-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+}
+
+
+/* =========================================
+   GLASS CARDS
+========================================= */
+
+.full-gallery-bespoke-dress
+.full-gallery-card {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.10),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    border: 1px solid rgba(199, 164, 90, 0.30);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.22);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(199, 164, 90, 0.55);
+
+    box-shadow:
+        0 24px 50px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD SHAPES
+========================================= */
+
+.full-gallery-bespoke-dress
+.full-gallery-card:nth-child(1) {
+    border-radius: 32px 12px 32px 12px;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card:nth-child(2) {
+    border-radius: 12px 32px 12px 32px;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card:nth-child(3) {
+    border-radius: 22px 32px 12px 32px;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card:nth-child(4) {
+    border-radius: 32px 22px 32px 12px;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.full-gallery-bespoke-dress
+.full-gallery-card-image {
+    display: block;
+
+    width: 100%;
+    height: 285px;
+
+    padding: 0;
+    border: 0;
+
+    background: #0b203d;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card:hover
+.full-gallery-card-image img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.full-gallery-bespoke-dress
+.full-gallery-card-content {
+    position: relative;
+
+    padding: 16px 52px 18px 18px;
+
+    background:
+        rgba(7, 26, 53, 0.58);
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card-category {
+    display: none;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card-title {
+    margin: 0;
+
+    color: #f8f2e8;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.15;
+
+    white-space: nowrap;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card-description {
+    display: -webkit-box;
+
+    margin: 8px 0 0;
+
+    color: rgba(248, 242, 232, 0.68);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.full-gallery-bespoke-dress
+.full-gallery-card-arrow {
+    position: absolute;
+
+    right: 16px;
+    bottom: 16px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #071a35;
+
+    background: #c7a45a;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.full-gallery-bespoke-dress
+.full-gallery-card-arrow:hover {
+    transform: translateX(3px);
+    background: #d8bb72;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .full-gallery-bespoke-dress {
+        padding: 60px 20px 70px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-category-header {
+        margin-bottom: 32px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-category-heading {
+        font-size: 30px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-category-intro {
+        font-size: 14px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-image {
+        height: 215px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-content {
+        padding: 10px 42px 11px 13px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-title {
+        font-size: 19px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-description {
+        font-size: 12.5px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-arrow {
+        right: 12px;
+        bottom: 12px;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .full-gallery-bespoke-dress {
+        padding: 52px 12px 62px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-category-heading {
+        font-size: 27px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-category-intro {
+        font-size: 13px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-image {
+        height: 180px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-content {
+        padding: 7px 20px 6px 8px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-title {
+        font-size: 16px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-description {
+        margin-top: 6px;
+        font-size: 12px;
+    }
+
+    .full-gallery-bespoke-dress
+    .full-gallery-card-arrow {
+        right: 8px;
+        bottom: 7px;
+
+        width: 27px;
+        height: 27px;
+
+        font-size: 10px;
+    }
+}
+/* =========================================
+   BESPOKE DRESS MODAL
+========================================= */
+
+.full-gallery-modal.modal-bespoke-dress {
+    background: rgba(7, 26, 53, 0.94);
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-overlay {
+    background: rgba(3, 12, 25, 0.72);
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-content {
+    background: #0b203d;
+
+    border: 1px solid rgba(199, 164, 90, 0.55);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-image {
+    background: #071a35;
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-details {
+    background:
+        rgba(11, 32, 61, 0.96);
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-category {
+    color: #c7a45a;
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-title {
+    color: #f8f2e8;
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-description {
+    color: rgba(248, 242, 232, 0.68);
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-modal-close {
+    color: #071a35;
+    background: #c7a45a;
+    border: 1px solid #c7a45a;
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-book-button {
+    color: #071a35;
+    background: #c7a45a;
+    border: 1px solid #c7a45a;
+}
+
+.full-gallery-modal.modal-bespoke-dress
+.gallery-book-button:hover {
+    background: #d8bb72;
+    border-color: #d8bb72;
+}
+/* =========================================
+   READY TO WEAR GALLERY
+========================================= */
+
+.full-gallery-ready-to-wear {
+    padding: 78px 6% 90px;
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(199, 164, 90, 0.10),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(7, 26, 53, 0.06),
+            transparent 38%
+        ),
+        #e4e4e1;
+    border-top: 1px solid rgba(7, 26, 53, 0.10);
+    border-bottom: 1px solid rgba(7, 26, 53, 0.10);
+}
+
+
+/* =========================================
+   CATEGORY HEADER
+========================================= */
+
+.full-gallery-ready-to-wear
+.full-gallery-category-header {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-category-eyebrow {
+    margin: 0 0 10px;
+    color: #8b7040;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-category-heading {
+    margin: 0;
+    color: #071a35;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-category-intro {
+    max-width: 600px;
+    margin: 16px auto 0;
+    color: rgba(7, 26, 53, 0.66);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.full-gallery-ready-to-wear
+.full-gallery-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.full-gallery-ready-to-wear
+.full-gallery-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #f8f8f5;
+
+    border: 1px solid
+        rgba(7, 26, 53, 0.12);
+
+    box-shadow:
+        0 16px 38px
+        rgba(7, 26, 53, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(199, 164, 90, 0.45);
+
+    box-shadow:
+        0 22px 46px
+        rgba(7, 26, 53, 0.14);
+}
+
+
+/* =========================================
+   MIXED CARD SHAPES
+========================================= */
+
+.full-gallery-ready-to-wear
+.full-gallery-card:nth-child(1) {
+    border-radius:
+        30px 12px 30px 12px;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card:nth-child(2) {
+    border-radius:
+        12px 30px 12px 30px;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card:nth-child(3) {
+    border-radius:
+        20px 30px 14px 30px;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card:nth-child(4) {
+    border-radius:
+        30px 20px 30px 14px;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card:nth-child(5) {
+    border-radius:
+        14px 30px 22px 30px;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card:nth-child(6) {
+    border-radius:
+        30px 14px 30px 22px;
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.full-gallery-ready-to-wear
+.full-gallery-card-image {
+    display: block;
+
+    width: 100%;
+    height: 285px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: #d7d8d5;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card:hover
+.full-gallery-card-image img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.full-gallery-ready-to-wear
+.full-gallery-card-content {
+    position: relative;
+
+    padding:
+        16px 52px 18px 18px;
+
+    background: #f8f8f5;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card-category {
+    display: none;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card-title {
+    margin: 0;
+
+    color: #071a35;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    white-space: nowrap;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card-description {
+    display: -webkit-box;
+
+    margin: 8px 0 0;
+
+    color:
+        rgba(7, 26, 53, 0.62);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.full-gallery-ready-to-wear
+.full-gallery-card-arrow {
+    position: absolute;
+
+    right: 16px;
+    bottom: 16px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f8f8f5;
+
+    background: #071a35;
+
+    border:
+        1px solid
+        rgba(199, 164, 90, 0.65);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.full-gallery-ready-to-wear
+.full-gallery-card-arrow:hover {
+    transform: translateX(3px);
+
+    background: #8b7040;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .full-gallery-ready-to-wear {
+        padding: 60px 20px 70px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-category-header {
+        margin-bottom: 32px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-category-heading {
+        font-size: 30px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-category-intro {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-image {
+        height: 215px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-content {
+        padding:
+            10px 42px 11px 13px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-title {
+        font-size: 19px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-description {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-arrow {
+        right: 12px;
+        bottom: 12px;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .full-gallery-ready-to-wear {
+        padding: 52px 12px 62px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-category-heading {
+        font-size: 27px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-category-intro {
+        font-size: 13px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-image {
+        height: 180px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-content {
+        padding:
+            7px 20px 6px 8px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-title {
+        font-size: 16px;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-description {
+        margin-top: 6px;
+
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .full-gallery-ready-to-wear
+    .full-gallery-card-arrow {
+        right: 8px;
+        bottom: 7px;
+
+        width: 27px;
+        height: 27px;
+
+        font-size: 10px;
+    }
+}
+/* =========================================
+   READY TO WEAR MODAL
+========================================= */
+
+.full-gallery-modal.modal-ready-to-wear {
+    background: rgba(228, 228, 225, 0.96);
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-overlay {
+    background: rgba(190, 191, 188, 0.72);
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-content {
+    background: #eeeeeb;
+
+    border:
+        1px solid
+        rgba(120, 120, 116, 0.28);
+
+    box-shadow:
+        0 25px 60px
+        rgba(70, 70, 66, 0.20);
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-image {
+    background: #d6d7d4;
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-details {
+    background: #eeeeeb;
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-category {
+    color: #8b7040;
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-title {
+    color: #333633;
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-description {
+    color: rgba(51, 54, 51, 0.68);
+}
+
+
+/* CLOSE BUTTON */
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-modal-close {
+    color: #4a4d49;
+
+    background: #d9dad7;
+
+    border:
+        1px solid
+        rgba(120, 120, 116, 0.30);
+}
+
+
+/* BOOK BUTTON */
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-book-button {
+    color: #4a4d49;
+
+    background: #d9dad7;
+
+    border:
+        1px solid
+        rgba(199, 164, 90, 0.65);
+}
+
+.full-gallery-modal.modal-ready-to-wear
+.gallery-book-button:hover {
+    color: #333633;
+
+    background: #cfcfcb;
+
+    border-color: #c7a45a;
+}
