@@ -516,6 +516,9 @@ p {
     line-height: 0.88;
     letter-spacing: -0.035em;
 }
+.hero-content h1 span {
+    display: block;
+}
 
 .hero-description {
     width: 100%;
